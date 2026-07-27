@@ -75,16 +75,21 @@
     position: relative;
     overflow: hidden;
   }
+  
   #hero::before {
     content: '';
-    position: absolute; inset: 0;
-    background:
-      url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwMCIgaGVpZ2h0PSIxMDAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxmaWx0ZXIgaWQ9Im5vaXNlIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iMC4wMDUiIG51bU9jdGF2ZXM9IjMiIHNlZWQ9IjIiIHJlc3VsdD0ibm9pc2UiIC8+PC9maWx0ZXI+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiMwYTBhMGEiIGZpbHRlcj0idXJsKCNub2lzZSkiIG9wYWNpdHk9IjAuMDMiIi8+PC9zdmc+');
-    opacity: 0.15;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    background-image: url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&h=1200&fit=crop');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.12;
     pointer-events: none;
     z-index: 0;
   }
-  #hero > * { position: relative; z-index: 1; }
   
   #hero::after {
     content: '';
@@ -93,7 +98,10 @@
       radial-gradient(ellipse 60% 60% at 80% 50%, rgba(200,150,62,0.06) 0%, transparent 70%),
       radial-gradient(ellipse 40% 80% at 10% 30%, rgba(200,150,62,0.03) 0%, transparent 60%);
     pointer-events: none;
+    z-index: 1;
   }
+  
+  #hero > * { position: relative; z-index: 2; }
   
   .hero-text { max-width: 560px; }
   .hero-tag {
@@ -347,7 +355,32 @@
   }
 
   /* ── LISTEN ──────────────────────────────────────── */
-  #listen { background: var(--bg); }
+  #listen { 
+    background: var(--bg);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #listen::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    background-image: url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=1200&fit=crop');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.12;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  #listen > * {
+    position: relative;
+    z-index: 1;
+  }
+  
   .listen-intro {
     max-width: 560px;
     color: rgba(232,226,217,0.65);
@@ -363,7 +396,7 @@
     margin-bottom: 3rem;
   }
 
-  /* ── EXPERTISE / ROLES ───────────────────────────── */
+  /* ── EXPERTISE / ROLES ─────────────────────��─────── */
   #expertise { background: var(--bg2); }
   .roles-grid {
     display: grid;
@@ -473,6 +506,8 @@
     nav { padding: 1rem 2rem; }
     .nav-links { gap: 1.5rem; }
     #hero { grid-template-columns: 1fr; padding: 8rem 2rem 4rem; }
+    #hero::before { width: 100%; opacity: 0.06; }
+    #listen::before { width: 100%; opacity: 0.06; }
     section { padding: 4rem 2rem; }
     .about-grid { grid-template-columns: 1fr; }
     .roles-grid { grid-template-columns: 1fr 1fr; }
