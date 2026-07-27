@@ -79,10 +79,22 @@
     content: '';
     position: absolute; inset: 0;
     background:
+      url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwMCIgaGVpZ2h0PSIxMDAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxmaWx0ZXIgaWQ9Im5vaXNlIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iMC4wMDUiIG51bU9jdGF2ZXM9IjMiIHNlZWQ9IjIiIHJlc3VsdD0ibm9pc2UiIC8+PC9maWx0ZXI+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiMwYTBhMGEiIGZpbHRlcj0idXJsKCNub2lzZSkiIG9wYWNpdHk9IjAuMDMiIi8+PC9zdmc+');
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 0;
+  }
+  #hero > * { position: relative; z-index: 1; }
+  
+  #hero::after {
+    content: '';
+    position: absolute; inset: 0;
+    background:
       radial-gradient(ellipse 60% 60% at 80% 50%, rgba(200,150,62,0.06) 0%, transparent 70%),
       radial-gradient(ellipse 40% 80% at 10% 30%, rgba(200,150,62,0.03) 0%, transparent 60%);
     pointer-events: none;
   }
+  
   .hero-text { max-width: 560px; }
   .hero-tag {
     font-family: var(--font-mono);
@@ -270,7 +282,26 @@
   h2 em { font-style: italic; color: var(--gold); }
 
   /* ── ABOUT ───────────────────────────────────────── */
-  #about { background: var(--bg2); }
+  #about { 
+    background: var(--bg2);
+    position: relative;
+    overflow: hidden;
+  }
+  #about::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1200&h=800&fit=crop');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.08;
+    pointer-events: none;
+  }
+  #about > * {
+    position: relative;
+    z-index: 1;
+  }
+  
   .about-grid {
     display: grid; grid-template-columns: 1fr 1fr;
     gap: 5rem; align-items: start;
@@ -331,32 +362,6 @@
     max-width: 720px;
     margin-bottom: 3rem;
   }
-  .credits-label {
-    font-family: var(--font-mono);
-    font-size: 0.65rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 1.5rem;
-    display: flex; align-items: center; gap: 0.8rem;
-  }
-  .credits-label::before {
-    content: ''; display: block;
-    width: 20px; height: 1px; background: var(--gold);
-  }
-  .credits-list {
-    display: flex; flex-wrap: wrap; gap: 0.6rem;
-  }
-  .credit-pill {
-    padding: 0.35rem 0.9rem;
-    border: 1px solid var(--line);
-    font-family: var(--font-mono);
-    font-size: 0.68rem;
-    color: rgba(232,226,217,0.6);
-    letter-spacing: 0.05em;
-    transition: border-color 0.3s, color 0.3s;
-  }
-  .credit-pill:hover { border-color: var(--gold); color: var(--gold); }
 
   /* ── EXPERTISE / ROLES ───────────────────────────── */
   #expertise { background: var(--bg2); }
@@ -550,12 +555,12 @@
     </div>
     <div class="skills-grid">
       <div class="skill-row">
-        <div class="skill-label">DAWs</div>
-        <div class="skill-value">Logic Pro, Ableton Live, Pro Tools, Reaper</div>
+        <div class="skill-label">SOFTWARE</div>
+        <div class="skill-value">Logic Pro, Ableton Live, Izotope RX, Reaper</div>
       </div>
       <div class="skill-row">
-        <div class="skill-label">Studio</div>
-        <div class="skill-value">Recording, Mixing, Mastering, Sound Design, Signal Flow, Outboard Gear</div>
+        <div class="skill-label">HARDWARE</div>
+        <div class="skill-value">Apple Macbook M1 Pro, Output Barefoot Frontier Monitors, Hifiman Ananda Nano Headphones, Hifiman Sundara Headphones, Kiwi Altruva Headphones</div>
       </div>
       <div class="skill-row">
         <div class="skill-label">Genres</div>
@@ -579,18 +584,6 @@
 
   <div class="spotify-embed-wrap">
     <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/678SGbiRp7tvQMNKfcauMO?utm_source=generator&theme=0&si=968c43401e114386" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-  </div>
-
-  <div class="credits-label">Selected artist credits</div>
-  <div class="credits-list">
-    <div class="credit-pill">Theodore</div>
-    <div class="credit-pill">Sworr</div>
-    <div class="credit-pill">Παιδί Τραύμα</div>
-    <div class="credit-pill">Danai Nielsen</div>
-    <div class="credit-pill">Sophie Lies</div>
-    <div class="credit-pill">Haneke Twins</div>
-    <div class="credit-pill">Spineless</div>
-    <div class="credit-pill">Afformance</div>
   </div>
 </section>
 
