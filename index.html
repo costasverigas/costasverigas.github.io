@@ -22,6 +22,11 @@
     --font-serif: 'Cormorant Garamond', Georgia, serif;
     --font-mono:  'JetBrains Mono', monospace;
     --font-sans:  'DM Sans', sans-serif;
+
+    /* ── Unified type system: 3 text styles used everywhere ── */
+    --fs-body:    1.05rem;   /* sans, paragraphs & descriptions */
+    --fs-label:   0.74rem;   /* mono, uppercase small labels */
+    --fs-display: 1.2rem;    /* serif italic, subheadings & pull-quotes */
   }
 
   html { scroll-behavior: smooth; }
@@ -33,6 +38,35 @@
     font-size: 16px;
     line-height: 1.6;
     overflow-x: hidden;
+  }
+
+  /* ── Shared text-style classes ─────────────────────
+     1) .t-body    → sans, body copy
+     2) .t-label   → mono, uppercase labels
+     3) .t-display → serif italic, subheadings/quotes
+  ─────────────────────────────────────────────────── */
+  .t-body {
+    font-family: var(--font-sans);
+    font-size: var(--fs-body);
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(232,226,217,0.72);
+  }
+  .t-label {
+    font-family: var(--font-mono);
+    font-size: var(--fs-label);
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .t-display {
+    font-family: var(--font-serif);
+    font-size: var(--fs-display);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--muted);
+    letter-spacing: 0.01em;
   }
 
   /* ── NAV ─────────────────────────────────────────── */
@@ -54,8 +88,8 @@
   .nav-links { display: flex; gap: 2.5rem; list-style: none; }
   .nav-links a {
     font-family: var(--font-mono);
-    font-size: 0.7rem;
-    letter-spacing: 0.15em;
+    font-size: var(--fs-label);
+    letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--muted);
     text-decoration: none;
@@ -75,7 +109,7 @@
     position: relative;
     overflow: hidden;
   }
-  
+
   #hero::before {
     content: '';
     position: absolute;
@@ -88,10 +122,10 @@
     pointer-events: none;
     z-index: 0;
   }
-  
+
   #hero::after {
     content: '';
-    position: absolute; 
+    position: absolute;
     inset: 0;
     background: linear-gradient(
       to right,
@@ -103,18 +137,14 @@
     pointer-events: none;
     z-index: 1;
   }
-  
+
   #hero > * { position: relative; z-index: 2; }
-  
+
   .hero-text { max-width: 560px; }
   .hero-tag {
-    font-family: var(--font-mono);
-    font-size: 0.68rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--gold);
     margin-bottom: 1.5rem;
     display: flex; align-items: center; gap: 0.8rem;
+    color: var(--gold);
   }
   .hero-tag::before {
     content: '';
@@ -124,7 +154,7 @@
   }
   h1 {
     font-family: var(--font-serif);
-    font-size: clamp(3.2rem, 6vw, 5rem);
+    font-size: clamp(3.4rem, 6vw, 5.2rem);
     font-weight: 300;
     line-height: 1.05;
     letter-spacing: -0.01em;
@@ -136,21 +166,11 @@
     color: var(--gold);
   }
   .hero-sub {
-    font-family: var(--font-serif);
-    font-size: 1.25rem;
-    font-weight: 300;
-    color: var(--muted);
-    font-style: italic;
     margin-bottom: 1.75rem;
-    letter-spacing: 0.02em;
   }
   .hero-desc {
-    font-size: 0.92rem;
-    color: rgba(232,226,217,0.6);
-    font-weight: 300;
-    line-height: 1.75;
     margin-bottom: 2.5rem;
-    max-width: 460px;
+    max-width: 480px;
   }
   .hero-cta {
     display: inline-flex; align-items: center; gap: 0.8rem;
@@ -158,8 +178,8 @@
     border: 1px solid var(--gold);
     color: var(--gold);
     font-family: var(--font-mono);
-    font-size: 0.7rem;
-    letter-spacing: 0.15em;
+    font-size: var(--fs-label);
+    letter-spacing: 0.14em;
     text-transform: uppercase;
     text-decoration: none;
     transition: background 0.3s, color 0.3s;
@@ -172,8 +192,8 @@
     border: 1px solid var(--line);
     color: var(--muted);
     font-family: var(--font-mono);
-    font-size: 0.7rem;
-    letter-spacing: 0.15em;
+    font-size: var(--fs-label);
+    letter-spacing: 0.14em;
     text-transform: uppercase;
     text-decoration: none;
     transition: border-color 0.3s, color 0.3s;
@@ -188,17 +208,10 @@
     position: relative;
   }
   .credits-card-eyebrow {
-    font-family: var(--font-mono);
-    font-size: 0.6rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--gold-dim);
     margin-bottom: 0.3rem;
+    color: var(--gold-dim);
   }
   .credits-card-date {
-    font-family: var(--font-mono);
-    font-size: 0.62rem;
-    color: var(--muted);
     margin-bottom: 1.5rem;
   }
   .credits-card-stat-main {
@@ -215,11 +228,6 @@
     line-height: 1;
   }
   .credits-card-num-label {
-    font-family: var(--font-mono);
-    font-size: 0.6rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--muted);
     margin-top: 0.5rem;
   }
   .credits-card-grid {
@@ -235,11 +243,6 @@
     color: var(--text);
   }
   .credits-card-grid .l {
-    font-family: var(--font-mono);
-    font-size: 0.55rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--muted);
     margin-top: 0.2rem;
   }
   .credits-card-badges { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.5rem; }
@@ -248,7 +251,6 @@
     padding: 0.5rem 0.75rem;
     background: var(--bg3);
     border: 1px solid var(--line);
-    font-size: 0.72rem;
     color: rgba(232,226,217,0.75);
   }
   .credits-card-badge .icon { color: var(--gold); font-size: 0.9rem; }
@@ -256,7 +258,7 @@
     display: block;
     text-align: center;
     font-family: var(--font-mono);
-    font-size: 0.62rem;
+    font-size: var(--fs-label);
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--gold);
@@ -271,13 +273,9 @@
   section { padding: 6rem 4rem; }
   .section-header { margin-bottom: 3.5rem; }
   .section-tag {
-    font-family: var(--font-mono);
-    font-size: 0.65rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--gold);
     margin-bottom: 0.8rem;
     display: flex; align-items: center; gap: 0.8rem;
+    color: var(--gold);
   }
   .section-tag::before {
     content: ''; display: block;
@@ -293,7 +291,7 @@
   h2 em { font-style: italic; color: var(--gold); }
 
   /* ── ABOUT ───────────────────────────────────────── */
-  #about { 
+  #about {
     background: var(--bg2);
     position: relative;
     overflow: hidden;
@@ -312,27 +310,21 @@
     position: relative;
     z-index: 1;
   }
-  
+
   .about-grid {
     display: grid; grid-template-columns: 1fr 1fr;
     gap: 5rem; align-items: start;
     margin-top: 3rem;
   }
   .about-text p {
-    color: rgba(232,226,217,0.75);
-    line-height: 1.8;
     margin-bottom: 1.2rem;
-    font-weight: 300;
   }
   .about-live-note {
     margin-top: 1.5rem;
     padding: 1rem 1.25rem;
     border-left: 2px solid var(--gold);
     background: var(--bg3);
-    font-size: 0.82rem;
-    color: rgba(232,226,217,0.55);
-    font-weight: 300;
-    line-height: 1.6;
+    color: rgba(232,226,217,0.6);
   }
   .about-live-note strong { color: var(--muted); font-weight: 500; }
   .skills-grid {
@@ -344,26 +336,20 @@
     background: var(--bg3);
   }
   .skill-label {
-    font-family: var(--font-mono);
-    font-size: 0.62rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--gold-dim);
     margin-bottom: 0.4rem;
+    color: var(--gold-dim);
   }
   .skill-value {
-    font-size: 0.875rem;
     color: rgba(232,226,217,0.8);
-    font-weight: 300;
   }
 
   /* ── LISTEN ──────────────────────────────────────── */
-  #listen { 
+  #listen {
     background: var(--bg);
     position: relative;
     overflow: hidden;
   }
-  
+
   #listen::before {
     content: '';
     position: absolute;
@@ -376,7 +362,7 @@
     pointer-events: none;
     z-index: 0;
   }
-  
+
   #listen::after {
     content: '';
     position: absolute;
@@ -391,21 +377,16 @@
     pointer-events: none;
     z-index: 1;
   }
-  
+
   #listen > * {
     position: relative;
     z-index: 2;
   }
-  
+
   .listen-intro {
     max-width: 560px;
-    color: rgba(232,226,217,0.65);
-    font-weight: 300;
     margin-top: 1rem;
     margin-bottom: 3rem;
-    font-style: italic;
-    font-family: var(--font-serif);
-    font-size: 1.05rem;
   }
   .spotify-embed-wrap {
     max-width: 720px;
@@ -435,10 +416,6 @@
     margin-bottom: 0.3rem;
   }
   .role-count {
-    font-family: var(--font-mono);
-    font-size: 0.65rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
     color: var(--gold);
   }
   .role-bar-track {
@@ -460,17 +437,12 @@
   .contact-inner .section-tag::before { display: none; }
   #contact h2 { margin-bottom: 1.5rem; }
   #contact p {
-    color: rgba(232,226,217,0.5);
-    font-weight: 300;
-    margin-bottom: 3rem;
-    font-family: var(--font-serif);
-    font-size: 1.05rem;
-    font-style: italic;
+    margin: 0 auto 3rem;
   }
   .contact-email {
     display: inline-block;
     font-family: var(--font-mono);
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     letter-spacing: 0.1em;
     color: var(--gold);
     text-decoration: none;
@@ -485,10 +457,6 @@
     list-style: none;
   }
   .socials a {
-    font-family: var(--font-mono);
-    font-size: 0.65rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
     color: var(--muted);
     text-decoration: none;
     transition: color 0.3s;
@@ -501,17 +469,7 @@
     border-top: 1px solid var(--line);
     display: flex; justify-content: space-between; align-items: center;
   }
-  footer span {
-    font-family: var(--font-mono);
-    font-size: 0.62rem;
-    letter-spacing: 0.1em;
-    color: var(--muted);
-  }
   footer a {
-    font-family: var(--font-mono);
-    font-size: 0.62rem;
-    letter-spacing: 0.1em;
-    color: var(--muted);
     text-decoration: none;
     transition: color 0.3s;
   }
@@ -546,41 +504,41 @@
 <!-- HERO -->
 <section id="hero">
   <div class="hero-text">
-    <div class="hero-tag">Athens, Greece · Available for studio work worldwide</div>
+    <div class="hero-tag t-label">Athens, Greece · Available for studio work worldwide</div>
     <h1>Costas<br><em>Verigas</em></h1>
-    <p class="hero-sub">Mixing &amp; Mastering Engineer · Producer</p>
-    <p class="hero-desc">Over 15 years behind the desk, shaping sound for artists across genres. From tracking to final master, every session is built around one goal — serving the song.</p>
+    <p class="hero-sub t-display">Mixing &amp; Mastering Engineer · Producer</p>
+    <p class="hero-desc t-body">Over 15 years behind the desk, shaping sound for artists across genres. From tracking to final master, every session is built around one goal — serving the song.</p>
     <a href="#contact" class="hero-cta">Get in touch</a>
     <a href="#listen" class="hero-cta-ghost">Listen to the work</a>
   </div>
 
   <div class="credits-card">
-    <div class="credits-card-eyebrow">Lifetime credits</div>
-    <div class="credits-card-date">Verified by Muso.AI · as of Jul 2026</div>
+    <div class="credits-card-eyebrow t-label">Lifetime credits</div>
+    <div class="credits-card-date t-label">Verified by Muso.AI · as of Jul 2026</div>
 
     <div class="credits-card-stat-main">
       <div class="credits-card-num">359</div>
-      <div class="credits-card-num-label">Total credits</div>
+      <div class="credits-card-num-label t-label">Total credits</div>
     </div>
 
     <div class="credits-card-grid">
       <div>
         <div class="n">7.1M</div>
-        <div class="l">Streams</div>
+        <div class="l t-label">Streams</div>
       </div>
       <div>
         <div class="n">3M</div>
-        <div class="l">Views</div>
+        <div class="l t-label">Views</div>
       </div>
       <div>
         <div class="n">37K</div>
-        <div class="l">Shazams</div>
+        <div class="l t-label">Shazams</div>
       </div>
     </div>
 
     <div class="credits-card-badges">
-      <div class="credits-card-badge"><span class="icon">&#9670;</span> Top 2% of Mastering Engineers worldwide</div>
-      <div class="credits-card-badge"><span class="icon">&#9670;</span> Top 5% of Mixing Engineers worldwide</div>
+      <div class="credits-card-badge t-body"><span class="icon">&#9670;</span> Top 2% of Mastering Engineers worldwide</div>
+      <div class="credits-card-badge t-body"><span class="icon">&#9670;</span> Top 5% of Mixing Engineers worldwide</div>
     </div>
 
     <a href="https://credits.muso.ai/profile/f0d86587-9bc1-49be-bd45-78d3321f1f8f" target="_blank" class="credits-card-link">View full credits on Muso.AI &#8594;</a>
@@ -590,35 +548,35 @@
 <!-- ABOUT -->
 <section id="about">
   <div class="section-header">
-    <div class="section-tag">About</div>
+    <div class="section-tag t-label">About</div>
     <h2>Sound is <em>intentional.</em></h2>
   </div>
   <div class="about-grid">
     <div class="about-text">
-      <p>I'm a mixing and mastering engineer and producer based in Athens, with over 15 years of studio experience across a wide range of genres. My credits span 300+ songs — from intimate singer-songwriter records to full-band productions.</p>
-      <p>I work closely with artists from tracking through to final master, treating every session as a collaboration. The goal is never to impose a sound — it's to find the one the song is already asking for, and deliver it with clarity and depth.</p>
-      <p>My work is independently tracked and verified on Muso.AI, currently ranking in the top 2% of mastering engineers and top 5% of mixing engineers worldwide.</p>
+      <p class="t-body">I'm a mixing and mastering engineer and producer based in Athens, with over 15 years of studio experience across a wide range of genres. My credits span 300+ songs — from intimate singer-songwriter records to full-band productions.</p>
+      <p class="t-body">I work closely with artists from tracking through to final master, treating every session as a collaboration. The goal is never to impose a sound — it's to find the one the song is already asking for, and deliver it with clarity and depth.</p>
+      <p class="t-body">My work is independently tracked and verified on Muso.AI, currently ranking in the top 2% of mastering engineers and top 5% of mixing engineers worldwide.</p>
 
-      <div class="about-live-note">
+      <div class="about-live-note t-body">
         <strong>Also on the road:</strong> Alongside studio work, I bring 15+ years of live sound and FOH engineering experience — including major festivals, theatre productions, and international touring productions across Greece and Switzerland.
       </div>
     </div>
     <div class="skills-grid">
       <div class="skill-row">
-        <div class="skill-label">SOFTWARE</div>
-        <div class="skill-value">Logic Pro, Ableton Live, Izotope RX, Reaper</div>
+        <div class="skill-label t-label">Software</div>
+        <div class="skill-value t-body">Logic Pro, Ableton Live, Izotope RX, Reaper</div>
       </div>
       <div class="skill-row">
-        <div class="skill-label">HARDWARE</div>
-        <div class="skill-value">Apple Macbook M1 Pro, Output Barefoot Frontier Monitors, Hifiman Ananda Nano Headphones, Hifiman Sundara Headphones, Kiwi Altruva Headphones</div>
+        <div class="skill-label t-label">Hardware</div>
+        <div class="skill-value t-body">Apple Macbook M1 Pro, RME Babyface Pro FS, Topping DX5II, Output Barefoot Frontier Monitors, Hifiman Ananda Nano Headphones, Hifiman Sundara Headphones, Kiwi Altruva Headphones</div>
       </div>
       <div class="skill-row">
-        <div class="skill-label">Genres</div>
-        <div class="skill-value">Indie, Pop, Alternative, Hip-Hop, Acoustic &amp; Singer-Songwriter, Rock, Metal, Electronic, Ambient, Experimental and more</div>
+        <div class="skill-label t-label">Genres</div>
+        <div class="skill-value t-body">Indie, Pop, Alternative, Hip-Hop, Acoustic &amp; Singer-Songwriter, Rock, Metal, Electronic, Ambient, Experimental and more</div>
       </div>
       <div class="skill-row">
-        <div class="skill-label">Also Skilled In</div>
-        <div class="skill-value">Live Consoles (Midas, Allen &amp; Heath, Yamaha), PA Systems, Stage Sound</div>
+        <div class="skill-label t-label">Also Skilled In</div>
+        <div class="skill-value t-body">Live Consoles (Midas, Allen &amp; Heath, Yamaha), PA Systems, Stage Sound</div>
       </div>
     </div>
   </div>
@@ -627,10 +585,10 @@
 <!-- LISTEN -->
 <section id="listen">
   <div class="section-header">
-    <div class="section-tag">Listen</div>
+    <div class="section-tag t-label">Listen</div>
     <h2>From the <em>studio.</em></h2>
   </div>
-  <p class="listen-intro">A curated playlist of mixing, mastering and production work &mdash; press play to hear it directly.</p>
+  <p class="listen-intro t-display">A curated playlist of mixing, mastering and production work &mdash; press play to hear it directly.</p>
 
   <div class="spotify-embed-wrap">
     <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/678SGbiRp7tvQMNKfcauMO?utm_source=generator&theme=0&si=968c43401e114386" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -640,38 +598,38 @@
 <!-- EXPERTISE / ROLES -->
 <section id="expertise">
   <div class="section-header">
-    <div class="section-tag">Credits by role</div>
+    <div class="section-tag t-label">Credits by role</div>
     <h2>Where I <em>show up.</em></h2>
   </div>
   <div class="roles-grid">
     <div class="role-cell">
       <div class="role-name">Mastering</div>
-      <div class="role-count">311 credits</div>
+      <div class="role-count t-label">311 credits</div>
       <div class="role-bar-track"><div class="role-bar-fill" style="width:100%"></div></div>
     </div>
     <div class="role-cell">
       <div class="role-name">Mixing</div>
-      <div class="role-count">219 credits</div>
+      <div class="role-count t-label">219 credits</div>
       <div class="role-bar-track"><div class="role-bar-fill" style="width:70%"></div></div>
     </div>
     <div class="role-cell">
       <div class="role-name">Producer</div>
-      <div class="role-count">139 credits</div>
+      <div class="role-count t-label">139 credits</div>
       <div class="role-bar-track"><div class="role-bar-fill" style="width:45%"></div></div>
     </div>
     <div class="role-cell">
       <div class="role-name">Engineer</div>
-      <div class="role-count">55 credits</div>
+      <div class="role-count t-label">55 credits</div>
       <div class="role-bar-track"><div class="role-bar-fill" style="width:18%"></div></div>
     </div>
     <div class="role-cell">
       <div class="role-name">Guitar</div>
-      <div class="role-count">53 credits</div>
+      <div class="role-count t-label">53 credits</div>
       <div class="role-bar-track"><div class="role-bar-fill" style="width:17%"></div></div>
     </div>
     <div class="role-cell">
       <div class="role-name">Co-Writer</div>
-      <div class="role-count">38 credits</div>
+      <div class="role-count t-label">38 credits</div>
       <div class="role-bar-track"><div class="role-bar-fill" style="width:12%"></div></div>
     </div>
   </div>
@@ -680,25 +638,23 @@
 <!-- CONTACT -->
 <section id="contact">
   <div class="contact-inner">
-    <div class="section-tag">Contact</div>
+    <div class="section-tag t-label">Contact</div>
     <h2>Let's work <em>together.</em></h2>
-    <p>Available for mixing, mastering and production work — remote or in-studio.</p>
+    <p class="t-display">Available for mixing, mastering and production work — remote or in-studio.</p>
     <a href="mailto:cv.reflection@gmail.com" class="contact-email">cv.reflection@gmail.com</a>
     <ul class="socials">
-      <li><a href="https://credits.muso.ai/profile/f0d86587-9bc1-49be-bd45-78d3321f1f8f" target="_blank">Muso.AI</a></li>
-      <li><a href="https://open.spotify.com/playlist/4nS6vvI38FsY8U0FLYcRlp" target="_blank">Spotify</a></li>
-      <li><a href="https://www.instagram.com/cv.reflection/" target="_blank">Instagram</a></li>
-      <li><a href="https://www.facebook.com/13270396137" target="_blank">Facebook</a></li>
-      <li><a href="#" target="_blank">LinkedIn</a></li>
+      <li><a href="https://credits.muso.ai/profile/f0d86587-9bc1-49be-bd45-78d3321f1f8f" target="_blank" class="t-label">Muso.AI</a></li>
+      <li><a href="https://open.spotify.com/playlist/4nS6vvI38FsY8U0FLYcRlp" target="_blank" class="t-label">Spotify</a></li>
+      <li><a href="https://www.instagram.com/cv.reflection/" target="_blank" class="t-label">Instagram</a></li>
     </ul>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <span>© 2026 Costas Verigas</span>
-  <span>Athens, Greece · Mixing &amp; Mastering · Available worldwide</span>
-  <a href="mailto:cv.reflection@gmail.com">cv.reflection@gmail.com</a>
+  <span class="t-label">© 2026 Costas Verigas</span>
+  <span class="t-label">Athens, Greece · Mixing &amp; Mastering · Available worldwide</span>
+  <a href="mailto:cv.reflection@gmail.com" class="t-label">cv.reflection@gmail.com</a>
 </footer>
 
 <script>
