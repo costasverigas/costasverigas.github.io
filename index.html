@@ -1,678 +1,151 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Costas Verigas — Mixing &amp; Mastering Engineer</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Costas Verigas — Mixing &amp; Mastering Engineer</title><style>body{margin:0;background:#141311}#costas-dark-work{max-width:1440px;margin:auto}#costas-dark-work .cv-cover-choice{display:block;border:0;background:transparent;padding:0;width:100%;color:var(--cv-fg);text-align:center}
+#costas-dark-work .cv-cover-choice img{object-fit:contain}
+#costas-dark-work .cv-cover-label{display:flex;align-items:center;justify-content:center;min-height:44px;font-size:12px}
+#costas-dark-work .cv-cover-choice[aria-pressed="true"] .cv-cover-label{color:var(--cv-accent);text-decoration:underline;text-underline-offset:5px}
+#costas-dark-work .cv-cover-external{display:flex;align-items:center;justify-content:center;min-height:44px;font-size:11px;color:var(--cv-secondary)}
+#costas-dark-work .cv-player{margin-top:24px}
+#costas-dark-work .cv-player-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:12px;font-size:13px}
+#costas-dark-work .cv-player-head p{margin:0;min-width:0;overflow-wrap:anywhere}
+#costas-dark-work .cv-player-head a{white-space:nowrap}
+#costas-dark-work #cv-spotify-player{min-height:152px}
+#costas-dark-work #cv-spotify-player iframe{display:block;width:100%;border:0;border-radius:0}
+#costas-dark-work .cv-player-hint{margin:10px 0 0;font-size:12px;color:var(--cv-secondary)}
+
+#costas-dark-work .cv-content-section{margin-top:40px;scroll-margin-top:24px}
+#costas-dark-work .cv-services-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:34px}
+#costas-dark-work h3{margin:0 0 10px;font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:26px;line-height:1.2}
+#costas-dark-work .cv-content-section p{margin:0 0 16px;color:var(--cv-secondary)}
+#costas-dark-work .cv-about-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:48px}
+#costas-dark-work .cv-tools summary{padding:10px 0;color:var(--cv-fg)}
+#costas-dark-work .cv-tools p{margin-top:12px}
+#costas-dark-work .cv-contact-row{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+#costas-dark-work .cv-email{font-family:'Newsreader',Georgia,serif;font-size:clamp(22px,4vw,34px);overflow-wrap:anywhere}
+#costas-dark-work .cv-contact-links{display:flex;align-items:center;flex-wrap:wrap;gap:22px}
+#costas-dark-work .cv-contact-links a{display:inline-flex;align-items:center;min-height:44px}
+#costas-dark-work .cv-anchor{display:block;scroll-margin-top:24px}
+#costas-dark-work .cv-skip{position:absolute;top:8px;left:8px;padding:10px 16px;background:var(--cv-accent);color:var(--cv-bg);transform:translateY(-200%);z-index:2}
+#costas-dark-work .cv-skip:focus{transform:none}
+#costas-dark-work .cv-cover-external{cursor:pointer}
+#costas-dark-work .cv-cover-choice{cursor:pointer}
+@media(max-width:700px){#costas-dark-work .cv-services-grid,#costas-dark-work .cv-about-grid{grid-template-columns:1fr;gap:20px}#costas-dark-work .cv-content-section{margin-top:32px}}
+@media(max-width:380px){#costas-dark-work .cv-wrap{padding:20px}#costas-dark-work .cv-nav-links{gap:16px}}
+
+</style><meta name="description" content="Mixing, mastering and production by Costas Verigas in Athens. Listen to selected releases and get in touch for studio or remote projects."><link rel="canonical" href="https://costasverigas.github.io/"></head><body><div id="costas-dark-work">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+#costas-dark-work{--cv-bg:#141311;--cv-fg:#e8e4dc;--cv-secondary:#b5afa3;--cv-line:#39352f;--cv-accent:#c7a774;background:var(--cv-bg);color:var(--cv-fg);font-family:'IBM Plex Sans',Arial,sans-serif;font-size:15px;line-height:1.6;overflow:hidden}
+#costas-dark-work *{box-sizing:border-box}
+#costas-dark-work .cv-wrap{padding:30px 44px}
+#costas-dark-work .cv-nav{display:flex;justify-content:space-between;align-items:center;gap:25px;border-bottom:1px solid var(--cv-line);padding-bottom:22px}
+#costas-dark-work .cv-brand{font-weight:500;letter-spacing:-.3px}
+#costas-dark-work a{color:inherit;text-underline-offset:5px}
+#costas-dark-work .cv-nav-links{display:flex;gap:25px;flex-wrap:wrap;font-size:13px}
+#costas-dark-work .cv-nav-links a{text-decoration:none}
+#costas-dark-work .cv-hero{display:grid;grid-template-columns:1fr .95fr;gap:42px;align-items:center;padding:44px 0 34px}
+#costas-dark-work .cv-eyebrow{color:var(--cv-accent);font-size:12px;letter-spacing:1.2px;text-transform:uppercase}
+#costas-dark-work h1{font-family:'Newsreader',Georgia,serif;font-size:clamp(48px,7vw,76px);line-height:1.02;font-weight:400;letter-spacing:-1.6px;margin:19px 0 19px;color:var(--cv-fg)}
+#costas-dark-work .cv-intro{max-width:360px;color:var(--cv-secondary);margin:0;line-height:1.7}
+#costas-dark-work .cv-actions{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-top:25px;font-size:13px}
+#costas-dark-work .cv-primary{display:inline-block;padding:11px 17px;background:var(--cv-accent);color:var(--cv-bg);text-decoration:none}
+#costas-dark-work .cv-photo{display:block;width:100%;height:310px;object-fit:cover;object-position:70% center}
+#costas-dark-work .cv-section-head{display:flex;justify-content:space-between;align-items:center;gap:20px;border-top:1px solid var(--cv-line);padding-top:22px;margin-bottom:22px;flex-wrap:wrap}
+#costas-dark-work h2{font-size:20px;font-weight:400;letter-spacing:-.3px;margin:0;color:var(--cv-fg)}
+#costas-dark-work .cv-controls{display:flex;align-items:center;gap:18px;font-size:12px}
+#costas-dark-work button{font-family:inherit;font-size:12px;background:transparent;color:var(--cv-secondary);border:1px solid var(--cv-line);padding:7px 11px;min-height:36px}
+#costas-dark-work .cv-window{overflow:hidden;width:100%;--cover-width:calc((100cqw - 108px)/10);container-type:inline-size}
+#costas-dark-work .cv-track{display:flex;width:max-content;will-change:transform;animation:cv-flow 325s linear infinite;transform:translateX(-50%)}
+#costas-dark-work .cv-group{display:flex;gap:12px;padding-right:12px;flex-shrink:0}
+#costas-dark-work .cv-cover{display:block;flex:0 0 auto;width:var(--cover-width);text-decoration:none}
+#costas-dark-work .cv-cover img{display:block;width:100%;aspect-ratio:1;object-fit:cover}
+#costas-dark-work .cv-window:hover .cv-track,#costas-dark-work .cv-window:focus-within .cv-track,#costas-dark-work[data-paused="true"] .cv-track{animation-play-state:paused}
+#costas-dark-work .cv-meta{display:flex;align-items:baseline;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:19px;color:var(--cv-secondary);font-size:12px}
+#costas-dark-work .cv-meta p{margin:0}
+#costas-dark-work .cv-bottom{margin-top:30px;padding-top:21px;border-top:1px solid var(--cv-line);display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:12px;color:var(--cv-secondary)}
+@keyframes cv-flow{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+@media(max-width:600px){#costas-dark-work .cv-wrap{padding:24px}#costas-dark-work .cv-nav{align-items:flex-start;flex-direction:column;gap:12px}#costas-dark-work .cv-nav-links{gap:22px}#costas-dark-work .cv-hero{grid-template-columns:1fr;padding:30px 0;gap:26px}#costas-dark-work h1{font-size:58px}#costas-dark-work .cv-photo{height:220px}#costas-dark-work .cv-window{--cover-width:calc((100cqw - 36px)/4)}#costas-dark-work button{min-height:44px}}
+@media(prefers-reduced-motion:reduce){#costas-dark-work .cv-track{animation:none}#costas-dark-work .cv-window{overflow-x:auto}#costas-dark-work .cv-group[aria-hidden]{display:none}#costas-dark-work .cv-track{transform:none}}
+#costas-dark-work .cv-muso{margin-top:34px}
+#costas-dark-work .cv-muso-date{font-size:12px;color:var(--cv-secondary)}
+#costas-dark-work .cv-muso-figure{margin:0 auto;max-width:680px}
+#costas-dark-work .cv-muso-figure>a{display:block}
+#costas-dark-work .cv-muso-figure img{display:block;width:100%;height:auto}
+#costas-dark-work .cv-muso-figure figcaption{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:15px;font-size:12px;color:var(--cv-secondary)}
+@media(max-width:600px){#costas-dark-work .cv-muso-figure figcaption{align-items:flex-start;flex-direction:column}#costas-dark-work .cv-muso-figure figcaption a{display:inline-flex;align-items:center;min-height:44px}}
 
-  :root {
-    --bg:       #0a0a0a;
-    --bg2:      #111111;
-    --bg3:      #181818;
-    --gold:     #c8963e;
-    --gold-dim: #8a6426;
-    --text:     #e8e2d9;
-    --muted:    #7a7169;
-    --line:     rgba(200,150,62,0.18);
-    --font-serif: 'Cormorant Garamond', Georgia, serif;
-    --font-mono:  'JetBrains Mono', monospace;
-    --font-sans:  'DM Sans', sans-serif;
-
-    /* ── Unified type system: 3 text styles used everywhere ── */
-    --fs-body:    1.05rem;   /* sans, paragraphs & descriptions */
-    --fs-label:   0.74rem;   /* mono, uppercase small labels */
-    --fs-display: 1.2rem;    /* serif italic, subheadings & pull-quotes */
-  }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--font-sans);
-    font-size: 16px;
-    line-height: 1.6;
-    overflow-x: hidden;
-  }
-
-  /* ── Shared text-style classes ─────────────────────
-     1) .t-body    → sans, body copy
-     2) .t-label   → mono, uppercase labels
-     3) .t-display → serif italic, subheadings/quotes
-  ─────────────────────────────────────────────────── */
-  .t-body {
-    font-family: var(--font-sans);
-    font-size: var(--fs-body);
-    font-weight: 300;
-    line-height: 1.8;
-    color: rgba(232,226,217,0.72);
-  }
-  .t-label {
-    font-family: var(--font-mono);
-    font-size: var(--fs-label);
-    font-weight: 400;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-  .t-display {
-    font-family: var(--font-serif);
-    font-size: var(--fs-display);
-    font-weight: 300;
-    font-style: italic;
-    color: var(--muted);
-    letter-spacing: 0.01em;
-  }
-
-  /* ── NAV ─────────────────────────────────────────── */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 1.25rem 4rem;
-    background: rgba(10,10,10,0.9);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--line);
-  }
-  .nav-logo {
-    font-family: var(--font-serif);
-    font-size: 1.1rem;
-    letter-spacing: 0.08em;
-    color: var(--gold);
-    text-decoration: none;
-  }
-  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
-  .nav-links a {
-    font-family: var(--font-mono);
-    font-size: var(--fs-label);
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--muted);
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  .nav-links a:hover { color: var(--gold); }
-
-  /* ── HERO ────────────────────────────────────────── */
-  #hero {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    align-items: center;
-    gap: 3rem;
-    padding: 0 4rem;
-    padding-top: 6rem;
-    position: relative;
-    overflow: hidden;
-  }
-
-  #hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url('https://raw.githubusercontent.com/costasverigas/costasverigas.github.io/main/cv-11.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    opacity: 0.15;
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  #hero::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      to right,
-      rgba(10,10,10,0) 0%,
-      rgba(10,10,10,0.3) 40%,
-      rgba(10,10,10,0.6) 70%,
-      rgba(10,10,10,0.85) 100%
-    );
-    pointer-events: none;
-    z-index: 1;
-  }
-
-  #hero > * { position: relative; z-index: 2; }
-
-  .hero-text { max-width: 560px; }
-  .hero-tag {
-    margin-bottom: 1.5rem;
-    display: flex; align-items: center; gap: 0.8rem;
-    color: var(--gold);
-  }
-  .hero-tag::before {
-    content: '';
-    display: block;
-    width: 32px; height: 1px;
-    background: var(--gold);
-  }
-  h1 {
-    font-family: var(--font-serif);
-    font-size: clamp(3.4rem, 6vw, 5.2rem);
-    font-weight: 300;
-    line-height: 1.05;
-    letter-spacing: -0.01em;
-    color: var(--text);
-    margin-bottom: 0.2rem;
-  }
-  h1 em {
-    font-style: italic;
-    color: var(--gold);
-  }
-  .hero-sub {
-    margin-bottom: 1.75rem;
-  }
-  .hero-desc {
-    margin-bottom: 2.5rem;
-    max-width: 480px;
-  }
-  .hero-cta {
-    display: inline-flex; align-items: center; gap: 0.8rem;
-    padding: 0.8rem 2rem;
-    border: 1px solid var(--gold);
-    color: var(--gold);
-    font-family: var(--font-mono);
-    font-size: var(--fs-label);
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: background 0.3s, color 0.3s;
-    margin-right: 1rem;
-  }
-  .hero-cta:hover { background: var(--gold); color: var(--bg); }
-  .hero-cta-ghost {
-    display: inline-flex; align-items: center; gap: 0.8rem;
-    padding: 0.8rem 2rem;
-    border: 1px solid var(--line);
-    color: var(--muted);
-    font-family: var(--font-mono);
-    font-size: var(--fs-label);
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: border-color 0.3s, color 0.3s;
-  }
-  .hero-cta-ghost:hover { border-color: var(--muted); color: var(--text); }
-
-  /* ── HERO CREDITS CARD ──────────────────────────── */
-  .credits-card {
-    background: linear-gradient(155deg, #151312 0%, #0d0c0b 100%);
-    border: 1px solid var(--line);
-    padding: 2rem 1.75rem;
-    position: relative;
-  }
-  .credits-card-eyebrow {
-    margin-bottom: 0.3rem;
-    color: var(--gold-dim);
-  }
-  .credits-card-date {
-    margin-bottom: 1.5rem;
-  }
-  .credits-card-stat-main {
-    text-align: center;
-    padding: 1.25rem 0 1.5rem;
-    border-bottom: 1px solid var(--line);
-    margin-bottom: 1.25rem;
-  }
-  .credits-card-num {
-    font-family: var(--font-serif);
-    font-size: 2.8rem;
-    font-weight: 600;
-    color: var(--gold);
-    line-height: 1;
-  }
-  .credits-card-num-label {
-    margin-top: 0.5rem;
-  }
-  .credits-card-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr);
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
-  }
-  .credits-card-grid div { text-align: center; }
-  .credits-card-grid .n {
-    font-family: var(--font-serif);
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--text);
-  }
-  .credits-card-grid .l {
-    margin-top: 0.2rem;
-  }
-  .credits-card-badges { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.5rem; }
-  .credits-card-badge {
-    display: flex; align-items: center; gap: 0.6rem;
-    padding: 0.5rem 0.75rem;
-    background: var(--bg3);
-    border: 1px solid var(--line);
-    color: rgba(232,226,217,0.75);
-  }
-  .credits-card-badge .icon { color: var(--gold); font-size: 0.9rem; }
-  .credits-card-link {
-    display: block;
-    text-align: center;
-    font-family: var(--font-mono);
-    font-size: var(--fs-label);
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--gold);
-    text-decoration: none;
-    padding-top: 0.5rem;
-    border-top: 1px solid var(--line);
-    transition: color 0.3s;
-  }
-  .credits-card-link:hover { color: var(--text); }
-
-  /* ── SECTION SHARED ──────────────────────────────── */
-  section { padding: 6rem 4rem; }
-  .section-header { margin-bottom: 3.5rem; }
-  .section-tag {
-    margin-bottom: 0.8rem;
-    display: flex; align-items: center; gap: 0.8rem;
-    color: var(--gold);
-  }
-  .section-tag::before {
-    content: ''; display: block;
-    width: 24px; height: 1px; background: var(--gold);
-  }
-  h2 {
-    font-family: var(--font-serif);
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 300;
-    line-height: 1.1;
-    letter-spacing: -0.01em;
-  }
-  h2 em { font-style: italic; color: var(--gold); }
-
-  /* ── ABOUT ───────────────────────────────────────── */
-  #about {
-    background: var(--bg2);
-    position: relative;
-    overflow: hidden;
-  }
-  #about::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1200&h=800&fit=crop');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.08;
-    pointer-events: none;
-  }
-  #about > * {
-    position: relative;
-    z-index: 1;
-  }
-
-  .about-grid {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 5rem; align-items: start;
-    margin-top: 3rem;
-  }
-  .about-text p {
-    margin-bottom: 1.2rem;
-  }
-  .about-live-note {
-    margin-top: 1.5rem;
-    padding: 1rem 1.25rem;
-    border-left: 2px solid var(--gold);
-    background: var(--bg3);
-    color: rgba(232,226,217,0.6);
-  }
-  .about-live-note strong { color: var(--muted); font-weight: 500; }
-  .skills-grid {
-    display: grid; gap: 1rem;
-  }
-  .skill-row {
-    padding: 1rem 1.25rem;
-    border: 1px solid var(--line);
-    background: var(--bg3);
-  }
-  .skill-label {
-    margin-bottom: 0.4rem;
-    color: var(--gold-dim);
-  }
-  .skill-value {
-    color: rgba(232,226,217,0.8);
-  }
-
-  /* ── LISTEN ──────────────────────────────────────── */
-  #listen {
-    background: var(--bg);
-    position: relative;
-    overflow: hidden;
-  }
-
-  #listen::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url('https://raw.githubusercontent.com/costasverigas/costasverigas.github.io/main/cv-20.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    opacity: 0.15;
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  #listen::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      to right,
-      rgba(10,10,10,0) 0%,
-      rgba(10,10,10,0.3) 40%,
-      rgba(10,10,10,0.6) 70%,
-      rgba(10,10,10,0.85) 100%
-    );
-    pointer-events: none;
-    z-index: 1;
-  }
-
-  #listen > * {
-    position: relative;
-    z-index: 2;
-  }
-
-  .listen-intro {
-    max-width: 560px;
-    margin-top: 1rem;
-    margin-bottom: 3rem;
-  }
-  .spotify-embed-wrap {
-    max-width: 720px;
-    margin-bottom: 3rem;
-  }
-
-  /* ── EXPERTISE / ROLES ───────────────────────────── */
-  #expertise { background: var(--bg2); }
-  .roles-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    border: 1px solid var(--line);
-    margin-top: 3rem;
-  }
-  .role-cell {
-    background: var(--bg2);
-    padding: 1.75rem 1.5rem;
-    transition: background 0.3s;
-  }
-  .role-cell:hover { background: var(--bg3); }
-  .role-name {
-    font-family: var(--font-serif);
-    font-size: 1.3rem;
-    font-weight: 400;
-    color: var(--text);
-    margin-bottom: 0.3rem;
-  }
-  .role-count {
-    color: var(--gold);
-  }
-  .role-bar-track {
-    height: 2px;
-    background: var(--line);
-    margin-top: 0.9rem;
-    overflow: hidden;
-  }
-  .role-bar-fill { height: 100%; background: var(--gold); }
-
-  /* ── CONTACT ─────────────────────────────────────── */
-  #contact {
-    background: var(--bg);
-    text-align: center;
-    padding: 7rem 4rem;
-  }
-  .contact-inner { max-width: 600px; margin: 0 auto; }
-  .contact-inner .section-tag { justify-content: center; }
-  .contact-inner .section-tag::before { display: none; }
-  #contact h2 { margin-bottom: 1.5rem; }
-  #contact p {
-    margin: 0 auto 3rem;
-  }
-  .contact-email {
-    display: inline-block;
-    font-family: var(--font-mono);
-    font-size: 0.9rem;
-    letter-spacing: 0.1em;
-    color: var(--gold);
-    text-decoration: none;
-    padding: 1rem 2.5rem;
-    border: 1px solid var(--gold);
-    transition: background 0.3s, color 0.3s;
-    margin-bottom: 3rem;
-  }
-  .contact-email:hover { background: var(--gold); color: var(--bg); }
-  .socials {
-    display: flex; justify-content: center; gap: 2rem;
-    list-style: none;
-  }
-  .socials a {
-    color: var(--muted);
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  .socials a:hover { color: var(--gold); }
-
-  /* ── FOOTER ──────────────────────────────────────── */
-  footer {
-    padding: 2rem 4rem;
-    border-top: 1px solid var(--line);
-    display: flex; justify-content: space-between; align-items: center;
-  }
-  footer a {
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  footer a:hover { color: var(--gold); }
-
-  /* ── RESPONSIVE ──────────────────────────────────── */
-  @media (max-width: 900px) {
-    nav { padding: 1rem 2rem; }
-    .nav-links { gap: 1.5rem; }
-    #hero { grid-template-columns: 1fr; padding: 8rem 2rem 4rem; }
-    #listen { padding: 6rem 2rem; }
-    section { padding: 4rem 2rem; }
-    .about-grid { grid-template-columns: 1fr; }
-    .roles-grid { grid-template-columns: 1fr 1fr; }
-    footer { flex-direction: column; gap: 0.5rem; text-align: center; }
-  }
 </style>
-</head>
-<body>
+<a class="cv-skip" href="#main-content">Skip to content</a>
+<div class="cv-wrap">
+<nav class="cv-nav" aria-label="Portfolio navigation"><a class="cv-brand" href="#hero">Costas Verigas</a><div class="cv-nav-links"><a href="#cv-work-strip">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a></div></nav>
+<main id="main-content"><section id="hero" class="cv-hero"><div><div class="cv-eyebrow">Mixing · Mastering · Production</div><h1>Costas<br>Verigas</h1><p class="cv-intro">Mixing and mastering engineer based in Athens. Working with artists in the studio and remotely.</p><div class="cv-actions"><a href="#cv-work-strip" class="cv-primary">Listen to my work ↓</a><a href="mailto:cv.reflection@gmail.com">Discuss a project</a></div></div><img class="cv-photo" src="cv-11.jpg" alt="Costas Verigas working at the studio desk"></section>
+<span id="listen" class="cv-anchor" aria-hidden="true"></span>
+<section id="cv-work-strip" aria-label="Music from the Mixed/Mastered/Produced playlist"><div class="cv-section-head"><h2>Selected work</h2><div class="cv-controls"><a href="https://open.spotify.com/playlist/678SGbiRp7tvQMNKfcauMO" target="_blank" rel="noopener noreferrer">Full playlist ↗</a><button type="button" class="cursor-interaction" aria-pressed="false" id="cv-pause">Pause motion</button></div></div><div class="cv-window"><div class="cv-track"><div class="cv-group"><a class="cv-cover" href="https://open.spotify.com/track/4yBR6mMqmEy3z7dV06Ulqa" target="_blank" rel="noopener noreferrer" aria-label="FUTUROKOMONO, Sophie lies — POTAMI — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e020b9078f2e3e7cc22ccf717e9" alt="FUTUROKOMONO, Sophie lies — POTAMI" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/5iT2PSt9GV1xSi9U33hsb8" target="_blank" rel="noopener noreferrer" aria-label="FUTUROKOMONO — HOMECOMING — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e0216d6659035107889bb2dbb28" alt="FUTUROKOMONO — HOMECOMING" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/34eu2vgE62HKbXr4Ofmcby" target="_blank" rel="noopener noreferrer" aria-label="mono esi — ΠΕΡΙΠΟΥ — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e028516e97799d351c7513d895d" alt="mono esi — ΠΕΡΙΠΟΥ" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/794RC1pVH7YsucrOD5kfQx" target="_blank" rel="noopener noreferrer" aria-label="Eua Politaki — NTISNEY — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e02f4bafca624a49a9ed0121068" alt="Eua Politaki — NTISNEY" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/0XZuRmWQ4jCk4izUwNrizD" target="_blank" rel="noopener noreferrer" aria-label="Voúdris, Nefeli Fasouli — The Velvet Bell — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e027d926eda95af1e6ed2a0cca2" alt="Voúdris, Nefeli Fasouli — The Velvet Bell" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/5ZBDyqbuDXF5GA6EpmT6PM" target="_blank" rel="noopener noreferrer" aria-label="SIC, Kalliopi Mitropoulou — Mou les — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e024adecd6575a41707ce41db05" alt="SIC, Kalliopi Mitropoulou — Mou les" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/5Ej7lJCMGAYAEkKu0rhToe" target="_blank" rel="noopener noreferrer" aria-label="Danai Simou — Distress — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e02d90c0bf2e0f9a6b5f1c44e00" alt="Danai Simou — Distress" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/74Wb2owySWnNDu9DhKqbo2" target="_blank" rel="noopener noreferrer" aria-label="Theodore — Absurd — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e02342d383ed35828657442ead1" alt="Theodore — Absurd" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/3GtJcpUEYvgkONMHoWhqti" target="_blank" rel="noopener noreferrer" aria-label="FUTUROKOMONO — TUBULAR - NIGHT MODE — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e028ba5066b5b7d3c87578949f7" alt="FUTUROKOMONO — TUBULAR - NIGHT MODE" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/1nFrAduobAKPSTL1hTtiPC" target="_blank" rel="noopener noreferrer" aria-label="Zaxari Axni, ολίνα — KAMIKAZE — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e020e2046dea4ed6fa0404a52f7" alt="Zaxari Axni, ολίνα — KAMIKAZE" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/5ooZwedvZ18dz7whCcRmM1" target="_blank" rel="noopener noreferrer" aria-label="FUTUROKOMONO, Eua Politaki — TO KENO - NIGHT MODE — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e02322dd7a1d3119587b61e0d5e" alt="FUTUROKOMONO, Eua Politaki — TO KENO - NIGHT MODE" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/7jurmlTkkCov2KsROJ0WQe" target="_blank" rel="noopener noreferrer" aria-label="Eua Politaki — TO KENO — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e02cbfd1dc95ebba5e53bfa2bbf" alt="Eua Politaki — TO KENO" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/0mRi2D2T89f6ujHnNgGFcz" target="_blank" rel="noopener noreferrer" aria-label="mono esi — Στα Χείλια — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e0293833a7b4615762bf156d4b3" alt="mono esi — Στα Χείλια" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/4dR9IkRTN2qzqRaL9qoa4P" target="_blank" rel="noopener noreferrer" aria-label="Zaxari Axni, Cilia Katrali — LIGO AKOMA — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e02e32fc09d9e65e8d9ed8faab8" alt="Zaxari Axni, Cilia Katrali — LIGO AKOMA" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/0nFkAiuWFSHz8viUv6iHtl" target="_blank" rel="noopener noreferrer" aria-label="Eua Politaki — LAPTOP — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e02b50961db6c9fe03edf043824" alt="Eua Politaki — LAPTOP" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/62QB8eTuuh4hZbD3zvG2rI" target="_blank" rel="noopener noreferrer" aria-label="Haneke Twins — You Say Nothing — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e02ae40c976466a0357720bdd2e" alt="Haneke Twins — You Say Nothing" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/5NztCoVMHVqv6vHlgvRIyK" target="_blank" rel="noopener noreferrer" aria-label="FUTUROKOMONO — TUBULAR — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e024124c89f60a956a41ddbb28c" alt="FUTUROKOMONO — TUBULAR" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/4DAvDnO6nNPv6SFBXWBigk" target="_blank" rel="noopener noreferrer" aria-label="Dionisis Farmakis — Όλα θα ΄ρθουν — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e02f60533faa5b1a09bf30b5a0a" alt="Dionisis Farmakis — Όλα θα ΄ρθουν" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/13SO8ColfswDe1PoYuOS0E" target="_blank" rel="noopener noreferrer" aria-label="HAN NAH, Katerina Liaki — Gold — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e02896a530427b2eeb3ed8452b9" alt="HAN NAH, Katerina Liaki — Gold" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/1xm8iVDJN9WijBGKqDP7s5" target="_blank" rel="noopener noreferrer" aria-label="FUTUROKOMONO, Sophie lies — THE NEEDLE - NIGHT MODE — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e02181ebafd99c5520666debcee" alt="FUTUROKOMONO, Sophie lies — THE NEEDLE - NIGHT MODE" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/4Eyx8Typvyhsr2lTFwHDcN" target="_blank" rel="noopener noreferrer" aria-label="Haneke Twins — No Choice — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e0255e831191abb42095bfc44b5" alt="Haneke Twins — No Choice" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/0s23AXzZWsnTP7JAVz0QTf" target="_blank" rel="noopener noreferrer" aria-label="Sophie lies — ΩΔΗ ΣΤΗΝ ΤΑΥΤΟΤΗΤΑ — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e02662e165ee9313a252eca1ac0" alt="Sophie lies — ΩΔΗ ΣΤΗΝ ΤΑΥΤΟΤΗΤΑ" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/3sLI0x4Qqm9pI8uOFVnVdf" target="_blank" rel="noopener noreferrer" aria-label="mono esi, Danai Nielsen — Το Κορίτσι — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e02bf2f93773bb1be0037532822" alt="mono esi, Danai Nielsen — Το Κορίτσι" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/3QYyJPlRhMeu0Ndtkw3hdu" target="_blank" rel="noopener noreferrer" aria-label="Spineless — Disease — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e0212248d1143af161cdd639bf5" alt="Spineless — Disease" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/7ompaPt3W1dBjH7HzTlxl2" target="_blank" rel="noopener noreferrer" aria-label="FUTUROKOMONO — ON HOLD — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e021bc9daa6da33383a0620aa8e" alt="FUTUROKOMONO — ON HOLD" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/7acTHPsS4pTNDu2f8L7ogD" target="_blank" rel="noopener noreferrer" aria-label="mono esi — Λοξά — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e0217af91f11fbd8e496eebdf6b" alt="mono esi — Λοξά" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/4rajEI2s0v7WM3juhX39co" target="_blank" rel="noopener noreferrer" aria-label="Katerina Liaki — You — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e0230379b3deb3417b9d71646db" alt="Katerina Liaki — You" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/1z3iU84assy4MNVLIWbknS" target="_blank" rel="noopener noreferrer" aria-label="Resonoot, Sigmataf — Ερωτήσεις — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e02b6583e99e668e38057eab5b1" alt="Resonoot, Sigmataf — Ερωτήσεις" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/5LN8tjusUyMmwubH7xOSPn" target="_blank" rel="noopener noreferrer" aria-label="FUTUROKOMONO, Jef Maarawi — ACROSS THE LAKE - NIGHT MODE — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e0265496096585b3d9c15c39196" alt="FUTUROKOMONO, Jef Maarawi — ACROSS THE LAKE - NIGHT MODE" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/6O2TUTFuxVIS9fdXw5Qz4q" target="_blank" rel="noopener noreferrer" aria-label="FUTUROKOMONO, Jef Maarawi — ACROSS THE LAKE — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e02785e4d9fab36fd1a47bcedb3" alt="FUTUROKOMONO, Jef Maarawi — ACROSS THE LAKE" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/4r0Dgn3r9FtNnciEwEOdxm" target="_blank" rel="noopener noreferrer" aria-label="Theodore — Run - 10th Anniversary — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e02375d6c1dcba9545ff2dfc7a5" alt="Theodore — Run - 10th Anniversary" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/1QZavsF6fapNaEx3JFkE0q" target="_blank" rel="noopener noreferrer" aria-label="FUTUROKOMONO, Danai Nielsen — BACK IN THE MIDDLE — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e023af573fab6aed617f80ad064" alt="FUTUROKOMONO, Danai Nielsen — BACK IN THE MIDDLE" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/2pxRQYTmVBTxNyiKSWXye6" target="_blank" rel="noopener noreferrer" aria-label="FOTINI VARELAKI — PASSINGS — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e02ae3f05b0747691a3894830dd" alt="FOTINI VARELAKI — PASSINGS" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/3hDfanQNJDjArsY8Oq4ANQ" target="_blank" rel="noopener noreferrer" aria-label="FOTINI VARELAKI — Aeroplanes — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e02071db8e795ed3e504ac82a36" alt="FOTINI VARELAKI — Aeroplanes" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/5qYGQoNNR2j9uIZUrLPHSa" target="_blank" rel="noopener noreferrer" aria-label="FUTUROKOMONO, STRAY, coslee — PEDESTAL — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e02453679c2ed2cc06400f4d346" alt="FUTUROKOMONO, STRAY, coslee — PEDESTAL" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/51TBGuofiTBcWgTEzQvqKG" target="_blank" rel="noopener noreferrer" aria-label="mono esi — Βροχή — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e02b1b1642b89871cef69f942f2" alt="mono esi — Βροχή" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/0uOBCN5AO9ZfYFyCfZkiJA" target="_blank" rel="noopener noreferrer" aria-label="Tiger Finkel — If the Moon — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e0213e0f62528e017b31b5f3ff5" alt="Tiger Finkel — If the Moon" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/0Lqec5kWpLGenZ5xCnfgNH" target="_blank" rel="noopener noreferrer" aria-label="Παιδί Τραύμα — Τρομακτικό — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e02c4946b22ddc120587eacda5e" alt="Παιδί Τραύμα — Τρομακτικό" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/5LKbkIkqfKWcTLkLErd6fm" target="_blank" rel="noopener noreferrer" aria-label="Sworr. — Bored — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e02d431f96dac937ea1ac5318d9" alt="Sworr. — Bored" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/6yYXV63WEmEyuRcUxujqzc" target="_blank" rel="noopener noreferrer" aria-label="My Own Treehouse — 184 — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e028d668642510faf1314a4732f" alt="My Own Treehouse — 184" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/6IbH1LoiyHOpsB59adlYZI" target="_blank" rel="noopener noreferrer" aria-label="Jef Maarawi — How to Sustain Minor Losses — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e02835c0751677f6793983aab0b" alt="Jef Maarawi — How to Sustain Minor Losses" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/2AvV663gE3rjrgNzF6Jw2t" target="_blank" rel="noopener noreferrer" aria-label="Danai Nielsen — Kontoula Lemonia — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e0299c1cfabcbf14159083a7b4b" alt="Danai Nielsen — Kontoula Lemonia" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/4kBxMokPJcHIwFuwaZmbWE" target="_blank" rel="noopener noreferrer" aria-label="Haneke Twins — Missiles — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e0279910cb7474b962f7f703c03" alt="Haneke Twins — Missiles" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/20httWxVJC3MyiB0MRlGea" target="_blank" rel="noopener noreferrer" aria-label="Haneke Twins — Speechless — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e02d106399e84f8e41116494e86" alt="Haneke Twins — Speechless" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/0pj7NmqRvL9voeeQnEOUw9" target="_blank" rel="noopener noreferrer" aria-label="Afformance — Introvert — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e02ddd93135dee44344624524a3" alt="Afformance — Introvert" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/7L67cujRHotsqkhbtk6IV9" target="_blank" rel="noopener noreferrer" aria-label="Atomic Love — Empty Glass — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e0290ede461ad47764a8655070f" alt="Atomic Love — Empty Glass" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/5G5DviZ3y6qN6yECvqDZiX" target="_blank" rel="noopener noreferrer" aria-label="Spineless — Human Monster — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e0295bf59e4acd6e299f4709f35" alt="Spineless — Human Monster" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/1OxdDAEudsY0hZ7n4TQeQI" target="_blank" rel="noopener noreferrer" aria-label="Anthony Vam — Make It Good — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e027a7eff5a62c8a856518810dc" alt="Anthony Vam — Make It Good" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/774LWlumE1VrE9vNPAgeq2" target="_blank" rel="noopener noreferrer" aria-label="Foam — Veins — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e0275ac18df362ec93ccfbf9a4f" alt="Foam — Veins" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/1zCT2dDQxYk1Kp6hW6J6TL" target="_blank" rel="noopener noreferrer" aria-label="Afformance — Here, Now, a Million Years — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e0284f79989095198e171b15bb7" alt="Afformance — Here, Now, a Million Years" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/6uGSVjaQ9geHOFfkXcJMJO" target="_blank" rel="noopener noreferrer" aria-label="Afformance — Sailor&#x27;s Abandoned Ship — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e029ad953f659056c20169212a6" alt="Afformance — Sailor&#x27;s Abandoned Ship" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/7BuDwEXJ4Ohsz9pBOgZarX" target="_blank" rel="noopener noreferrer" aria-label="Afformance — Christmas Truce — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e02270a39d69eb8d631451a49ff" alt="Afformance — Christmas Truce" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/18Zx1YSzz0i9rCL4UXsJPY" target="_blank" rel="noopener noreferrer" aria-label="Theodore — Peak — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e02b3ac12fdd052d58f1d25470b" alt="Theodore — Peak" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/0SgoI92quSa0FDxa5GPl9u" target="_blank" rel="noopener noreferrer" aria-label="Theodore — The Big Rip — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e026d05632f59613172a0252fb0" alt="Theodore — The Big Rip" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/2CMwwXfeGics8E3P3eK6Lr" target="_blank" rel="noopener noreferrer" aria-label="Theodore — Aquatic — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e02c4edf20f1afd0e77dd4dee57" alt="Theodore — Aquatic" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/2nhohLFGPYsQAUlcfPCMX8" target="_blank" rel="noopener noreferrer" aria-label="Inter Alia — Χριστούγεννα Λάκτα — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e029534b30fbc10129e9553e9bf" alt="Inter Alia — Χριστούγεννα Λάκτα" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/2Sqf5AO7oXLm3gHzI6PLjB" target="_blank" rel="noopener noreferrer" aria-label="Theodore, Luke Abbott — Man and his Tools - Luke Abbott Speaking in Tongues Remix — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e02ab073151e90f28b905bf6b7b" alt="Theodore, Luke Abbott — Man and his Tools - Luke Abbott Speaking in Tongues Remix" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/2xt0DOR2Vg395bQuHgBZco" target="_blank" rel="noopener noreferrer" aria-label="Lines &amp; Circles — Summer Trip — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e02f936b1ef7ba173762d90a498" alt="Lines &amp; Circles — Summer Trip" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/6hrjFDoabbXlWjY2x2VmLr" target="_blank" rel="noopener noreferrer" aria-label="Resonoot — Κάπου Στο Τέλος Της Διαδρομής — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e02dd9b0c368f9a982c7f700703" alt="Resonoot — Κάπου Στο Τέλος Της Διαδρομής" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/25HwxNqaNQRr5GTu3dl9Ox" target="_blank" rel="noopener noreferrer" aria-label="Sworr. — WAIT. — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e02a39a2dec1f209cfe26c1275e" alt="Sworr. — WAIT." width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/09qn6NLORvMgixaGkpJ1mI" target="_blank" rel="noopener noreferrer" aria-label="Sworr. — 4AM — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e02bad0a3f11fd486086c7b3c83" alt="Sworr. — 4AM" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/7HTJqMET2R1iFnbvncXiOP" target="_blank" rel="noopener noreferrer" aria-label="Afformance — Hedgehog — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e02d4d38a756e5e620ead9833c0" alt="Afformance — Hedgehog" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/7ca65IlqlApEPhqQSv8UeE" target="_blank" rel="noopener noreferrer" aria-label="Foam — Mistake — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e02bb9fb5cbbf2a35b79a9815ae" alt="Foam — Mistake" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/4LYUSnqU51fCWufLaXZLK4" target="_blank" rel="noopener noreferrer" aria-label="Haneke Twins — Climb — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e0242f5b56948eb91f9aa94ffb9" alt="Haneke Twins — Climb" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/5R4ByJnuX8FqBEnH7zq4rD" target="_blank" rel="noopener noreferrer" aria-label="Danai Nielsen — Who Are They — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e0256d01195f0c1f8597bb346c9" alt="Danai Nielsen — Who Are They" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/5IIDNi13gczQJESkhh0Xzo" target="_blank" rel="noopener noreferrer" aria-label="Theodore — Floating - Revisited — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e0200507df5f2caf10da780bb49" alt="Theodore — Floating - Revisited" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/6zWQOvimc6cLg6KmU1kFbQ" target="_blank" rel="noopener noreferrer" aria-label="Theodore, Max Cooper — Voyage - Max Cooper Remix — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e0249bace3929efa0c8d995ab48" alt="Theodore, Max Cooper — Voyage - Max Cooper Remix" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/2z3prIfDBbpwd5nX8Uk7uc" target="_blank" rel="noopener noreferrer" aria-label="Karby — Abilify — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e0261185d08678718e9766239b2" alt="Karby — Abilify" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/72Md1Favs6CtYHlR2ESDGO" target="_blank" rel="noopener noreferrer" aria-label="Krul — Efw — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e0278cafc03d4abab2a6999b593" alt="Krul — Efw" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/2FqKOOP9bepDKVejL13VN9" target="_blank" rel="noopener noreferrer" aria-label="HAN NAH — Sundown — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e025842f56aa273c87a36c662c9" alt="HAN NAH — Sundown" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/5QQRVSEiPtp2AukdG6YmRM" target="_blank" rel="noopener noreferrer" aria-label="Project Uncut, Anima — Mura Kami — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e02073e6b21a9b753bf48f27165" alt="Project Uncut, Anima — Mura Kami" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/7HFJ42XM5RMeXwWYIhnVjV" target="_blank" rel="noopener noreferrer" aria-label="Project Uncut — Lonely — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e02c0f18821f1283b7dc2418add" alt="Project Uncut — Lonely" width="240" height="240" loading="lazy"></a><a class="cv-cover" href="https://open.spotify.com/track/6MFsxMayYFe13nfUSzVtLO" target="_blank" rel="noopener noreferrer" aria-label="Afformance — Mannerism — open in Spotify"><img src="https://i.scdn.co/image/ab67616d00001e0242fbe021593938e8f3df5e14" alt="Afformance — Mannerism" width="240" height="240" loading="lazy"></a></div></div></div><div class="cv-meta"><p>Mixing, mastering & production</p><p><a href="https://credits.muso.ai/profile/f0d86587-9bc1-49be-bd45-78d3321f1f8f" target="_blank" rel="noopener noreferrer">Full credits on Muso.AI ↗</a></p></div><div class="cv-player" aria-label="Listen to selected work">
+  <div class="cv-player-head"><p id="cv-selected-track" aria-live="polite">Listen to the playlist, or choose a release above.</p><a id="cv-selected-external" href="https://open.spotify.com/playlist/678SGbiRp7tvQMNKfcauMO" target="_blank" rel="noopener noreferrer">Open in Spotify ↗</a></div>
+  <div id="cv-spotify-player"><iframe src="https://open.spotify.com/embed/playlist/678SGbiRp7tvQMNKfcauMO?theme=0" title="Spotify: Costas Verigas mixed, mastered and produced playlist" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+  <p id="cv-player-hint" class="cv-player-hint">Playback is provided by Spotify.</p>
+</div>
 
-<!-- NAV -->
-<nav>
-  <a class="nav-logo" href="#hero">CV</a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#listen">Listen</a></li>
-    <li><a href="#expertise">Credits</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-
-<!-- HERO -->
-<section id="hero">
-  <div class="hero-text">
-    <div class="hero-tag t-label">Athens, Greece · Available for studio work worldwide</div>
-    <h1>Costas<br><em>Verigas</em></h1>
-    <p class="hero-sub t-display">Mixing &amp; Mastering Engineer · Producer</p>
-    <p class="hero-desc t-body">Over 15 years behind the desk, shaping sound for artists across genres. From tracking to final master, every session is built around one goal — serving the song.</p>
-    <a href="#contact" class="hero-cta">Get in touch</a>
-    <a href="#listen" class="hero-cta-ghost">Listen to the work</a>
+</section>
+<section id="cv-muso" aria-labelledby="cv-muso-title" class="cv-muso">
+  <div class="cv-section-head">
+    <h2 id="cv-muso-title">Credits &amp; reach</h2>
+    <span class="cv-muso-date">Image updated: <time id="cv-muso-updated" datetime="2026-10-07">October 2026</time></span>
   </div>
-
-  <div class="credits-card">
-    <div class="credits-card-eyebrow t-label">Lifetime credits</div>
-    <div class="credits-card-date t-label">Verified by Muso.AI · as of Jul 2026</div>
-
-    <div class="credits-card-stat-main">
-      <div class="credits-card-num">359</div>
-      <div class="credits-card-num-label t-label">Total credits</div>
-    </div>
-
-    <div class="credits-card-grid">
-      <div>
-        <div class="n">7.1M</div>
-        <div class="l t-label">Streams</div>
-      </div>
-      <div>
-        <div class="n">3M</div>
-        <div class="l t-label">Views</div>
-      </div>
-      <div>
-        <div class="n">37K</div>
-        <div class="l t-label">Shazams</div>
-      </div>
-    </div>
-
-    <div class="credits-card-badges">
-      <div class="credits-card-badge t-body"><span class="icon">&#9670;</span> Top 2% of Mastering Engineers worldwide</div>
-      <div class="credits-card-badge t-body"><span class="icon">&#9670;</span> Top 5% of Mixing Engineers worldwide</div>
-    </div>
-
-    <a href="https://credits.muso.ai/profile/f0d86587-9bc1-49be-bd45-78d3321f1f8f" target="_blank" class="credits-card-link">View full credits on Muso.AI &#8594;</a>
-  </div>
+  <figure class="cv-muso-figure">
+    <a href="Muso.png" target="_blank" rel="noopener noreferrer" id="cv-muso-full-image" aria-label="Open the full-size Muso analytics image">
+      <img id="cv-muso-image" src="Muso.png" alt="Muso.AI summary of credited releases, streams, videos and views, alongside mastering engineer chart placement." width="1454" height="942" loading="lazy" decoding="async">
+    </a>
+    <figcaption><span>Monthly snapshot · Muso.AI</span><a href="https://credits.muso.ai/profile/f0d86587-9bc1-49be-bd45-78d3321f1f8f" target="_blank" rel="noopener noreferrer">View full credits on Muso ↗</a></figcaption>
+  </figure>
 </section>
 
-<!-- ABOUT -->
-<section id="about">
-  <div class="section-header">
-    <div class="section-tag t-label">About</div>
-    <h2>Sound is <em>intentional.</em></h2>
+<section id="services" class="cv-content-section" aria-labelledby="cv-services-title">
+  <span id="expertise" class="cv-anchor" aria-hidden="true"></span>
+  <div class="cv-section-head"><h2 id="cv-services-title">Services</h2></div>
+  <div class="cv-services-grid">
+    <div><h3>Mixing</h3><p>Mixing for singles, EPs and albums, working with your recordings and the direction of the project.</p></div>
+    <div><h3>Mastering</h3><p>The final stage for individual tracks and complete releases, with attention to consistency across the record.</p></div>
+    <div><h3>Production &amp; recording</h3><p>Collaboration in the studio, from tracking and arrangement through to the final mix.</p></div>
   </div>
-  <div class="about-grid">
-    <div class="about-text">
-      <p class="t-body">I'm a mixing and mastering engineer and producer based in Athens, with over 15 years of studio experience across a wide range of genres. My credits span 300+ songs — from intimate singer-songwriter records to full-band productions.</p>
-      <p class="t-body">I work closely with artists from tracking through to final master, treating every session as a collaboration. The goal is never to impose a sound — it's to find the one the song is already asking for, and deliver it with clarity and depth.</p>
-      <p class="t-body">My work is independently tracked and verified on Muso.AI, currently ranking in the top 2% of mastering engineers and top 5% of mixing engineers worldwide.</p>
-
-      <div class="about-live-note t-body">
-        <strong>Also on the road:</strong> Alongside studio work, I bring 15+ years of live sound and FOH engineering experience — including major festivals, theatre productions, and international touring productions across Greece and Switzerland.
-      </div>
+</section>
+<section id="about" class="cv-content-section" aria-labelledby="cv-about-title">
+  <div class="cv-section-head"><h2 id="cv-about-title">About</h2></div>
+  <div class="cv-about-grid">
+    <div>
+      <p>I'm a mixing and mastering engineer and producer based in Athens, with over 15 years of studio experience across a wide range of genres. I work with artists in the studio and remotely, from recording through to the final master.</p>
+      <p>Alongside studio work, I bring over 15 years of live sound and FOH engineering experience, including festivals, theatre and international touring productions across Greece and Switzerland.</p>
     </div>
-    <div class="skills-grid">
-      <div class="skill-row">
-        <div class="skill-label t-label">Software</div>
-        <div class="skill-value t-body">Logic Pro, Ableton Live, Izotope RX, Reaper</div>
-      </div>
-      <div class="skill-row">
-        <div class="skill-label t-label">Hardware</div>
-        <div class="skill-value t-body">Apple Macbook M1 Pro, RME Babyface Pro FS, Topping DX5II, Output Barefoot Frontier Monitors, Hifiman Ananda Nano Headphones, Hifiman Sundara Headphones, Kiwi Altruva Headphones</div>
-      </div>
-      <div class="skill-row">
-        <div class="skill-label t-label">Genres</div>
-        <div class="skill-value t-body">Indie, Pop, Alternative, Hip-Hop, Acoustic &amp; Singer-Songwriter, Rock, Metal, Electronic, Ambient, Experimental and more</div>
-      </div>
-      <div class="skill-row">
-        <div class="skill-label t-label">Also Skilled In</div>
-        <div class="skill-value t-body">Live Consoles (Midas, Allen &amp; Heath, Yamaha), PA Systems, Stage Sound</div>
-      </div>
+    <div>
+      <h3>Genres</h3><p>Indie, pop, alternative, hip-hop, acoustic &amp; singer-songwriter, rock, metal, electronic, ambient and experimental.</p>
+      <details class="cv-tools"><summary>Studio &amp; tools</summary><p>Logic Pro, Ableton Live, iZotope RX and Reaper.</p><p>Apple MacBook M1 Pro, RME Babyface Pro FS, Topping DX5II, Output Barefoot Frontier monitors, HIFIMAN Ananda Nano and Sundara, and Kiwi Altruva headphones.</p><p>Live consoles: Midas, Allen &amp; Heath and Yamaha.</p></details>
     </div>
   </div>
 </section>
-
-<!-- LISTEN -->
-<section id="listen">
-  <div class="section-header">
-    <div class="section-tag t-label">Listen</div>
-    <h2>From the <em>studio.</em></h2>
-  </div>
-  <p class="listen-intro t-display">A curated playlist of mixing, mastering and production work &mdash; press play to hear it directly.</p>
-
-  <div class="spotify-embed-wrap">
-    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/678SGbiRp7tvQMNKfcauMO?utm_source=generator&theme=0&si=968c43401e114386" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-  </div>
+<section id="contact" class="cv-content-section" aria-labelledby="cv-contact-title">
+  <div class="cv-section-head"><h2 id="cv-contact-title">Contact</h2></div>
+  <div class="cv-contact-row"><div><p>For mixing, mastering and production enquiries.</p><a class="cv-email" href="mailto:cv.reflection@gmail.com">cv.reflection@gmail.com</a></div><div class="cv-contact-links"><a href="https://www.instagram.com/cv.reflection/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://credits.muso.ai/profile/f0d86587-9bc1-49be-bd45-78d3321f1f8f" target="_blank" rel="noopener noreferrer">Muso.AI ↗</a></div></div>
 </section>
 
-<!-- EXPERTISE / ROLES -->
-<section id="expertise">
-  <div class="section-header">
-    <div class="section-tag t-label">Credits by role</div>
-    <h2>Where I <em>show up.</em></h2>
-  </div>
-  <div class="roles-grid">
-    <div class="role-cell">
-      <div class="role-name">Mastering</div>
-      <div class="role-count t-label">311 credits</div>
-      <div class="role-bar-track"><div class="role-bar-fill" style="width:100%"></div></div>
-    </div>
-    <div class="role-cell">
-      <div class="role-name">Mixing</div>
-      <div class="role-count t-label">219 credits</div>
-      <div class="role-bar-track"><div class="role-bar-fill" style="width:70%"></div></div>
-    </div>
-    <div class="role-cell">
-      <div class="role-name">Producer</div>
-      <div class="role-count t-label">139 credits</div>
-      <div class="role-bar-track"><div class="role-bar-fill" style="width:45%"></div></div>
-    </div>
-    <div class="role-cell">
-      <div class="role-name">Engineer</div>
-      <div class="role-count t-label">55 credits</div>
-      <div class="role-bar-track"><div class="role-bar-fill" style="width:18%"></div></div>
-    </div>
-    <div class="role-cell">
-      <div class="role-name">Guitar</div>
-      <div class="role-count t-label">53 credits</div>
-      <div class="role-bar-track"><div class="role-bar-fill" style="width:17%"></div></div>
-    </div>
-    <div class="role-cell">
-      <div class="role-name">Co-Writer</div>
-      <div class="role-count t-label">38 credits</div>
-      <div class="role-bar-track"><div class="role-bar-fill" style="width:12%"></div></div>
-    </div>
-  </div>
-</section>
+</main>
+<footer class="cv-bottom"><span>Athens, Greece · Remote & in-studio</span><a href="mailto:cv.reflection@gmail.com">cv.reflection@gmail.com</a></footer>
+</div>
 
-<!-- CONTACT -->
-<section id="contact">
-  <div class="contact-inner">
-    <div class="section-tag t-label">Contact</div>
-    <h2>Let's work <em>together.</em></h2>
-    <p class="t-display">Available for mixing, mastering and production work — remote or in-studio.</p>
-    <a href="mailto:cv.reflection@gmail.com" class="contact-email">cv.reflection@gmail.com</a>
-    <ul class="socials">
-      <li><a href="https://credits.muso.ai/profile/f0d86587-9bc1-49be-bd45-78d3321f1f8f" target="_blank" class="t-label">Muso.AI</a></li>
-      <li><a href="https://open.spotify.com/playlist/4nS6vvI38FsY8U0FLYcRlp" target="_blank" class="t-label">Spotify</a></li>
-      <li><a href="https://www.instagram.com/cv.reflection/" target="_blank" class="t-label">Instagram</a></li>
-    </ul>
-  </div>
-</section>
+</div>
 
-<!-- FOOTER -->
-<footer>
-  <span class="t-label">© 2026 Costas Verigas</span>
-  <span class="t-label">Athens, Greece · Mixing &amp; Mastering · Available worldwide</span>
-  <a href="mailto:cv.reflection@gmail.com" class="t-label">cv.reflection@gmail.com</a>
-</footer>
-
+<script src="muso-updated.js"></script>
 <script>
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      const target = document.querySelector(a.getAttribute('href'));
-      if (!target) return;
-      e.preventDefault();
-      const offset = target.getBoundingClientRect().top + window.scrollY - 70;
-      window.scrollTo({ top: offset, behavior: 'smooth' });
-    });
-  });
-
-  const nav = document.querySelector('nav');
-  window.addEventListener('scroll', () => {
-    nav.style.borderBottomColor = window.scrollY > 50
-      ? 'rgba(200,150,62,0.25)' : 'rgba(200,150,62,0.18)';
-  });
+(() => {
+ const value = window.COSTAS_MUSO_UPDATED;
+ if (!/^\d{4}-\d{2}-\d{2}$/.test(value || '')) return;
+ const date = new Date(value + 'T12:00:00Z');
+ if (Number.isNaN(date.getTime())) return;
+ const time = document.getElementById('cv-muso-updated');
+ time.dateTime = value;
+ time.textContent = new Intl.DateTimeFormat('en-GB', { month: 'long', year: 'numeric', timeZone: 'UTC' }).format(date);
+ const url = 'Muso.png?v=' + value;
+ document.getElementById('cv-muso-image').src = url;
+ document.getElementById('cv-muso-full-image').href = url;
+})();
 </script>
-</body>
-</html>
+<script src="playlist-covers.js"></script>
+<script src="portfolio.js"></script>
+</body></html>
