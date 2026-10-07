@@ -44,7 +44,27 @@ jobs:
               response = connection.getresponse()
               report('Muso workspace endpoint HTTP status: ' + str(response.status))
               if response.status != 200:
-                  report('Connection not verified. No response body or credentials were logged.')
+                  error_body = response.read(65536).decode('utf-8', errors='replace').lower()
+                  content_type = response.getheader('Content-Type', '').lower()
+                  report('Error response format: ' + ('JSON' if 'json' in content_type else 'HTML' if 'html' in content_type else 'other'))
+                  markers = {
+                      'invalid api key': 'invalid API key',
+                      'invalid_api_key': 'invalid API key',
+                      'expired': 'expiry mentioned',
+                      'workspace': 'workspace mentioned',
+                      'unauthorized': 'unauthorized',
+                      'forbidden': 'forbidden',
+                      'cloudfront': 'CloudFront response',
+                      'request blocked': 'request blocked by service',
+                      'access denied': 'access denied',
+                      'subscription': 'subscription mentioned',
+                      'permission': 'permission mentioned',
+                      'api key': 'API key mentioned',
+                      'api-key': 'API key mentioned',
+                  }
+                  hints = sorted({label for marker, label in markers.items() if marker in error_body})
+                  report('Service error indicators: ' + (', '.join(hints) if hints else 'none recognized'))
+                  report('Connection not verified. Response text and credentials were not logged.')
                   sys.exit(1)
               body = response.read(2 * 1024 * 1024 + 1)
               if len(body) > 2 * 1024 * 1024:
