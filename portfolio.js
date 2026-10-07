@@ -62,12 +62,7 @@
   const external = document.getElementById('cv-selected-external');
   const hint = document.getElementById('cv-player-hint');
   let selected = null;
-  let controller = null;
-  let controllerReady = false;
-  let requestedApi = false;
-  let api = null;
-
-  function fallbackPlayer() {
+  function showPlayer() {
     const frame = document.createElement('iframe');
     frame.src = 'https://open.spotify.com/embed/track/' + selected.track_id + '?theme=0';
     frame.title = 'Spotify player: ' + selected.artist + ' — ' + selected.title;
@@ -77,24 +72,11 @@
     frame.setAttribute('allowfullscreen', '');
     mount.replaceChildren(frame);
   }
-  function createPlayer() {
-    if (!api || !selected || controller) return;
-    mount.replaceChildren();
-    api.createController(mount, {url: external.href, width: '100%', height: 152}, ctrl => {
-      controller = ctrl;
-      ctrl.addListener('ready', () => {
-        controllerReady = true;
-        ctrl.loadEntity(external.href);
-        ctrl.play();
-      });
-      ctrl.addListener('playback_started', () => { hint.textContent = 'Playing on Spotify'; });
-    });
-  }
-  window.onSpotifyIframeApiReady = value => { api = value; createPlayer(); };
 
   track.addEventListener('click', event => {
     const button = event.target.closest('button[data-track-id]');
     if (!button) return;
+    const previousId = selected && selected.track_id;
     selected = items.find(item => item.track_id === button.dataset.trackId);
     if (!selected) return;
     setPaused(true);
@@ -102,24 +84,11 @@
     selectedLabel.textContent = selected.artist + ' — ' + selected.title;
     external.href = 'https://open.spotify.com/track/' + selected.track_id;
     external.textContent = 'Open in Spotify ↗';
-    hint.textContent = 'If playback does not start, press Play in the player.';
+    hint.textContent = 'Press Play in the Spotify player to listen.';
     track.querySelectorAll('button[data-track-id]').forEach(control => {
       control.setAttribute('aria-pressed', String(control.dataset.trackId === selected.track_id));
     });
-    if (controller && controllerReady) {
-      controller.loadEntity(external.href);
-      controller.play();
-    } else if (!controller) {
-      fallbackPlayer();
-      if (api) createPlayer();
-      else if (!requestedApi) {
-        requestedApi = true;
-        const script = document.createElement('script');
-        script.src = 'https://open.spotify.com/embed/iframe-api/v1';
-        script.async = true;
-        script.onerror = () => { hint.textContent = 'Press Play in the player, or open the track in Spotify.'; };
-        document.head.append(script);
-      }
-    }
+    // Keep the iframe mounted until a different track is selected.
+    if (previousId !== selected.track_id) showPlayer();
   });
 })();
