@@ -64,7 +64,29 @@ jobs:
                   }
                   hints = sorted({label for marker, label in markers.items() if marker in error_body})
                   report('Service error indicators: ' + (', '.join(hints) if hints else 'none recognized'))
-                  report('Connection not verified. Response text and credentials were not logged.')
+                  try:
+                      error_data = json.loads(error_body)
+                  except ValueError:
+                      error_data = {}
+                  def safe_errors(value, depth=0):
+                      if depth > 4:
+                          return
+                      if isinstance(value, dict):
+                          for field, item in value.items():
+                              if field in ('message', 'error', 'code', 'status', 'statuscode'):
+                                  if isinstance(item, (int, bool)):
+                                      report('Service ' + field + ': ' + str(item))
+                                  elif isinstance(item, str):
+                                      safe = item.replace(key.lower(), '[redacted]')
+                                      if re.fullmatch(r'[a-zA-Z .,:;_/-]{1,160}', safe) and not re.search(r'[a-zA-Z_-]{35,}', safe):
+                                          report('Service ' + field + ': ' + safe)
+                              if isinstance(item, (dict, list)):
+                                  safe_errors(item, depth + 1)
+                      elif isinstance(value, list):
+                          for item in value[:5]:
+                              safe_errors(item, depth + 1)
+                  safe_errors(error_data)
+                  report('Connection not verified. Credentials were not logged.')
                   sys.exit(1)
               body = response.read(2 * 1024 * 1024 + 1)
               if len(body) > 2 * 1024 * 1024:
