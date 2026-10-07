@@ -12,6 +12,7 @@ on:
 
 permissions:
   contents: write
+  pages: write
 
 concurrency:
   group: spotify-portfolio-sync
@@ -54,6 +55,7 @@ jobs:
           SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
         run: python scripts/sync_spotify.py
       - name: Save changed covers and encrypted token rotation
+        id: save
         if: always() && steps.sync.outcome != 'skipped'
         env:
           SYNC_OUTCOME: ${{ steps.sync.outcome }}
@@ -68,7 +70,13 @@ jobs:
             git commit -m "Refresh Spotify portfolio data"
             git pull --rebase origin main
             git push origin HEAD:main
+            echo 'changed=true' >> "$GITHUB_OUTPUT"
           fi
+      - name: Refresh the published GitHub Pages site
+        if: always() && (github.event_name == 'workflow_dispatch' || steps.save.outputs.changed == 'true')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds" --jq .status
       - name: Report incomplete sync
         if: steps.sync.outcome == 'failure'
         run: |

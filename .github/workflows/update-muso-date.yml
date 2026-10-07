@@ -10,6 +10,7 @@ on:
 
 permissions:
   contents: write
+  pages: write
 
 concurrency:
   group: update-muso-date
@@ -45,3 +46,7 @@ jobs:
             git commit -m "Update Muso image upload date"
             git push origin HEAD:main
           fi
+      - name: Refresh the published image and date
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds" --jq .status
