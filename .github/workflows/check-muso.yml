@@ -1,0 +1,79 @@
+name: Check Muso connection
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/check-muso.yml
+
+permissions: {}
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Check workspace access without exposing the key
+        env:
+          MUSO_WORKSPACE_KEY: ${{ secrets.MUSO_WORKSPACE_KEY }}
+          MUSO_PROFILE_ID: f0d86587-9bc1-49be-bd45-78d3321f1f8f
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import http.client
+          import json
+          import os
+          import re
+          import sys
+
+          def report(message):
+              print(message)
+              with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as summary:
+                  summary.write(message + '\n\n')
+
+          key = os.environ.get('MUSO_WORKSPACE_KEY', '').strip()
+          if not key:
+              report('Missing repository secret: MUSO_WORKSPACE_KEY.')
+              sys.exit(1)
+
+          connection = http.client.HTTPSConnection('api.muso.ai', timeout=30)
+          try:
+              connection.request('GET', '/api/c/v4a/workspace/roster',
+                  headers={'workspace-api-key': key, 'Accept': 'application/json'})
+              response = connection.getresponse()
+              report('Muso workspace endpoint HTTP status: ' + str(response.status))
+              if response.status != 200:
+                  report('Connection not verified. No response body or credentials were logged.')
+                  sys.exit(1)
+              body = response.read(2 * 1024 * 1024 + 1)
+              if len(body) > 2 * 1024 * 1024:
+                  report('Response exceeded the diagnostic size limit.')
+                  sys.exit(1)
+              data = json.loads(body)
+          except (OSError, http.client.HTTPException, ValueError):
+              report('Could not retrieve a valid JSON response. No credentials were logged.')
+              sys.exit(1)
+          finally:
+              connection.close()
+
+          target = os.environ['MUSO_PROFILE_ID']
+          matched = []
+          def visit(value):
+              if isinstance(value, dict):
+                  if any(isinstance(item, str) and item == target for item in value.values()):
+                      matched.append(value)
+                  for child in value.values():
+                      visit(child)
+              elif isinstance(value, list):
+                  for child in value:
+                      visit(child)
+          visit(data)
+
+          report('Workspace access verified. Target profile found: ' + ('yes' if matched else 'not in this response'))
+          if matched:
+              fields = sorted({field for item in matched for field in item
+                  if re.fullmatch(r'[A-Za-z][A-Za-z0-9_]{0,70}', field)})
+              report('Available profile field names: ' + ', '.join(fields))
+          report('This check does not publish or store Muso analytics and does not change the website.')
+          PY
