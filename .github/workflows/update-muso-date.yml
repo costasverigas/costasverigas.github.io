@@ -1,0 +1,47 @@
+name: Update Muso image date
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - Muso.png
+      - .github/workflows/update-muso-date.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-muso-date
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Record the image upload date
+        env:
+          IMAGE_UPLOAD_TIME: ${{ github.event.head_commit.timestamp }}
+        run: |
+          python3 - <<'PY'
+          import datetime
+          import os
+          from pathlib import Path
+          timestamp = os.environ.get('IMAGE_UPLOAD_TIME')
+          date = (datetime.datetime.fromisoformat(timestamp.replace('Z', '+00:00')).date()
+                  if timestamp else datetime.datetime.now(datetime.timezone.utc).date())
+          Path('muso-updated.js').write_text(
+              '// Automatically updated when Muso.png is replaced in this repository.\n'
+              'window.COSTAS_MUSO_UPDATED = "' + date.isoformat() + '";\n')
+          PY
+          if ! git diff --quiet -- muso-updated.js; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add muso-updated.js
+            git commit -m "Update Muso image upload date"
+            git push origin HEAD:main
+          fi
