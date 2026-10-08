@@ -55,7 +55,7 @@
 #costas-dark-work .cv-controls{display:flex;align-items:center;gap:18px;font-size:12px}
 #costas-dark-work button{font-family:inherit;font-size:12px;background:transparent;color:var(--cv-secondary);border:1px solid var(--cv-line);padding:7px 11px;min-height:36px}
 #costas-dark-work .cv-window{overflow:hidden;width:100%;--cover-width:calc((100cqw - 108px)/10);container-type:inline-size}
-#costas-dark-work .cv-track{display:flex;width:max-content;will-change:transform;animation:cv-flow 325s linear infinite;transform:translateX(-50%)}
+#costas-dark-work .cv-track{display:flex;width:max-content;will-change:transform;animation:cv-flow 295.454545s linear infinite;transform:translateX(-50%)}
 #costas-dark-work .cv-group{display:flex;gap:12px;padding-right:12px;flex-shrink:0}
 #costas-dark-work .cv-cover{display:block;flex:0 0 auto;width:var(--cover-width);text-decoration:none}
 #costas-dark-work .cv-cover img{display:block;width:100%;aspect-ratio:1;object-fit:cover}
@@ -93,6 +93,12 @@
 #costas-dark-work .cv-tools summary:hover{color:var(--cv-fg)}
 @media(max-width:760px){#costas-dark-work .cv-about-grid{grid-template-columns:1fr;gap:24px}#costas-dark-work .cv-about-grid h2,#costas-dark-work .cv-about-grid h3{margin-bottom:16px}#costas-dark-work .cv-about-grid h3{font-size:26px}#costas-dark-work .cv-muso,#costas-dark-work .cv-content-section{margin-top:40px}}
 @media(max-width:480px){#costas-dark-work .cv-section-head{align-items:flex-start;gap:16px}#costas-dark-work .cv-section-link{font-size:13px;padding:8px 12px}}
+</style>
+<style>
+#costas-dark-work .cv-contact-row{align-items:flex-end}
+#costas-dark-work .cv-contact-row .cv-email,#costas-dark-work .cv-contact-links a{font-family:'Newsreader',Georgia,serif;font-size:clamp(20px,3vw,24px);font-weight:400;line-height:1.4}
+#costas-dark-work .cv-contact-links a{gap:8px}
+#costas-dark-work .cv-social-icon{width:20px;height:20px;flex:none}
 </style>
 <div class="cv-wrap">
 <nav class="cv-nav" aria-label="Portfolio navigation"><a class="cv-brand" href="#hero">Costas Verigas</a><div class="cv-nav-links"><a href="#cv-work-strip">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a></div></nav>
@@ -145,7 +151,7 @@
 </section>
 <section id="contact" class="cv-content-section" aria-labelledby="cv-contact-title">
   <div class="cv-section-head"><h2 id="cv-contact-title">Contact</h2></div>
-  <div class="cv-contact-row"><div><p>For mixing, mastering and production enquiries.</p><a class="cv-email" href="mailto:cv.reflection@gmail.com">cv.reflection@gmail.com</a></div><div class="cv-contact-links"><a href="https://www.instagram.com/cv.reflection/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://credits.muso.ai/profile/f0d86587-9bc1-49be-bd45-78d3321f1f8f" target="_blank" rel="noopener noreferrer">Muso.AI ↗</a></div></div>
+  <div class="cv-contact-row"><div><p>For mixing, mastering and production enquiries.</p><a class="cv-email" href="mailto:cv.reflection@gmail.com">cv.reflection@gmail.com</a></div><div class="cv-contact-links"><a href="https://www.instagram.com/cv.reflection/" target="_blank" rel="noopener noreferrer"><svg class="cv-social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span>Instagram ↗</span></a><a href="https://credits.muso.ai/profile/f0d86587-9bc1-49be-bd45-78d3321f1f8f" target="_blank" rel="noopener noreferrer"><svg class="cv-social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M17.8556 4.73774L12.3882 10.3705C12.1727 10.5925 11.8268 10.5925 11.6113 10.3705L6.1439 4.73774C4.60543 3.15233 2 4.29111 2 6.54882V14.4074V17.4456V19.1245C2 19.6082 2.37549 20 2.83798 20C3.30097 20 3.67596 19.6082 3.67596 19.1245L3.67796 6.44068C3.67796 6.02069 4.00995 5.68167 4.41444 5.69473C4.80543 5.70675 5.10692 6.06353 5.10692 6.47203L5.10242 16.0639C5.10242 16.4724 5.40391 16.8292 5.79491 16.8412C6.1994 16.8537 6.53139 16.5147 6.53139 16.0952V9.22181C6.58389 8.86399 6.87938 8.58922 7.23687 8.58922C7.63136 8.58922 7.95135 8.92354 7.95135 9.33569L7.95335 13.1903C7.95335 13.5978 8.26934 13.9284 8.65983 13.9284C9.04982 13.9284 9.36632 13.5983 9.36632 13.1903L9.36682 11.3536C9.36682 11.046 9.72181 10.8908 9.9318 11.1065L17.8561 19.2572C19.3946 20.8426 22 19.7038 22 17.4461V6.54882C21.9995 4.29111 19.3941 3.15233 17.8556 4.73774ZM14.6327 12.6402C14.6327 12.9479 14.2777 13.1036 14.0677 12.8873L13.4437 12.2448C13.3117 12.109 13.3117 11.8865 13.4437 11.7506L14.0677 11.1081C14.2777 10.8919 14.6327 11.0475 14.6327 11.3552V12.6402ZM17.4906 14.6456C17.4906 15.0656 17.1586 15.4047 16.7541 15.3916C16.3631 15.3796 16.0616 15.0228 16.0616 14.6143V9.38009C16.0616 8.9716 16.3631 8.61481 16.7541 8.6028C17.1586 8.59026 17.4906 8.92928 17.4906 9.34875V14.6456ZM20.3485 17.583C20.3485 17.9951 20.0285 18.3294 19.6341 18.3294C19.2396 18.3294 18.9196 17.9951 18.9196 17.583V6.41195C18.9196 5.9998 19.2396 5.66548 19.6341 5.66548C20.0285 5.66548 20.3485 5.9998 20.3485 6.41195V17.583Z"/></svg><span>Muso.AI ↗</span></a></div></div>
 </section>
 
 </main>
@@ -170,5 +176,5 @@
 })();
 </script>
 <script src="playlist-covers.js"></script>
-<script src="portfolio.js?v=stable-embed-20261007"></script>
+<script src="portfolio.js?v=contact-motion-20261008"></script>
 </body></html>

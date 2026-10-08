@@ -39,7 +39,7 @@
   duplicate.setAttribute('aria-hidden', 'true');
   duplicate.querySelectorAll('button,a').forEach(control => control.tabIndex = -1);
   track.prepend(duplicate);
-  track.style.animationDuration = Math.max(items.length * 5, 50) + 's';
+  track.style.animationDuration = (Math.max(items.length * 5, 50) / 1.1) + 's';
 
   const pause = root.querySelector('#cv-pause');
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
