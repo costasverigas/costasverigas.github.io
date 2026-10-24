@@ -42,3 +42,24 @@ token μόνο κρυπτογραφημένο, με κλειδί που προκ
 Αντικατάστησε το **Muso.png**, με ίδιο όνομα και ίδιο κεφαλαίο M.
 Το **Update Muso image date** ενημερώνει αυτόματα την ημερομηνία και ζητά Pages build.
 Η ημερομηνία αφορά την ενημέρωση της εικόνας, όχι ζωντανή μέτρηση των στατιστικών.
+
+## Cover order and motion
+
+The strip moves at 1.2× its original speed (20% faster). Both the main page
+and design preview use the same player script.
+
+The six-hour sync also reads the public credits on
+https://muso.ai/profile/f0d86587-9bc1-49be-bd45-78d3321f1f8f and sorts covers by
+Muso's track popularity score, descending. This is a popularity index, not an
+absolute stream or YouTube view count. No additional secrets are required.
+
+Matches use Spotify track IDs and exact Spotify artwork IDs across image sizes,
+never approximate song titles. Each release's score is the highest score among
+its matched tracks. Sorting happens before album and visual deduplication so the
+most popular playlist track represents each cover. Newest playlist additions
+break equal-score ties. Covers without a matching score follow scored covers.
+
+`portfolio-popularity.json` records the public source, fetch time, and last known
+scores. If Muso is unavailable or returns an incomplete set of credits, the sync
+uses that cache. No analytics request runs in a visitor's browser. The public
+Muso endpoint can change; a failed refresh is reported in the workflow log.

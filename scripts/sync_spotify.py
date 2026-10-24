@@ -1,5 +1,6 @@
 """Read the owner's playlist with PKCE OAuth and publish unique cover metadata."""
 import base64
+from datetime import datetime, timezone
 import hashlib
 import io
 import json
@@ -17,10 +18,12 @@ from PIL import Image
 PLAYLIST = '678SGbiRp7tvQMNKfcauMO'
 ROOT = Path(__file__).resolve().parents[1]
 VAULT = ROOT / 'spotify-refresh.enc.json'
+MUSO_PROFILE = 'f0d86587-9bc1-49be-bd45-78d3321f1f8f'
+MUSO_SOURCE = 'https://muso.ai/profile/' + MUSO_PROFILE
 
 
 def get_json(url, token=None, form=None):
-    headers = {'Accept': 'application/json'}
+    headers = {'Accept': 'application/json', 'User-Agent': 'Mozilla/5.0'}
     if token:
         if urllib.parse.urlsplit(url).netloc != 'api.spotify.com':
             raise RuntimeError('Unexpected Spotify pagination host.')
@@ -60,10 +63,88 @@ def visually_same(left, right):
     return error < 12
 
 
-def normalize(rows):
+def artwork_key(url):
+    # Spotify artwork has the same 24-character identifier at every image size.
+    match = re.fullmatch(r'ab67616d[0-9a-f]{8}([0-9a-f]{24})',
+                         urllib.parse.urlsplit(url or '').path.rsplit('/', 1)[-1])
+    return match.group(1) if match else None
+
+
+def popularity_cache(credits):
+    tracks, artwork = {}, {}
+    for credit in credits:
+        track = credit.get('track') or {}
+        score = track.get('popularity')
+        if type(score) not in (int, float) or not 0 <= score <= 100:
+            continue
+        track_id = track.get('spotifyId') or ''
+        if re.fullmatch(r'[A-Za-z0-9]{22}', track_id):
+            tracks[track_id] = max(score, tracks.get(track_id, -1))
+        album = credit.get('album') or {}
+        key = artwork_key(album.get('avatarUrl_640_640') or album.get('avatarUrl'))
+        if key:
+            artwork[key] = max(score, artwork.get(key, -1))
+    if not tracks and not artwork:
+        raise RuntimeError('No usable Muso popularity scores returned.')
+    return {'source': MUSO_SOURCE, 'metric': 'muso_track_popularity',
+            'updated_at': datetime.now(timezone.utc).isoformat(timespec='seconds'),
+            'tracks': tracks, 'artwork': artwork}
+
+
+def refresh_popularity():
+    cache_file = ROOT / 'portfolio-popularity.json'
+    try:
+        credits, offset = [], 0
+        for _ in range(100):
+            url = (f'https://muso.ai/api/v4/profile/{MUSO_PROFILE}/credits?'
+                   f'offset={offset}&limit=100&sortKey=popularity&sortDirection=DESC')
+            response = get_json(url)
+            if response.get('result') != 'ok':
+                raise RuntimeError('Muso did not return public credits.')
+            page = response['data']
+            items = page['items']
+            credits.extend(items)
+            if not page.get('hasMoreToLoad'):
+                if len(credits) < page.get('totalCount', 0):
+                    raise RuntimeError('Incomplete Muso credits.')
+                break
+            if not items:
+                raise RuntimeError('Empty Muso pagination page.')
+            offset += len(items)
+        else:
+            raise RuntimeError('Muso pagination limit exceeded.')
+        cache = popularity_cache(credits)
+        cache_file.write_text(json.dumps(cache, ensure_ascii=False, indent=2) + '\n')
+        print(f'Muso popularity refreshed: {len(cache["tracks"])} track scores.')
+        return cache
+    except Exception:
+        # An unavailable provider must not erase the last known ranking.
+        if cache_file.exists():
+            print('Muso unavailable; retaining cached popularity scores.')
+            return json.loads(cache_file.read_text())
+        print('Muso unavailable; retaining newest-first order until scores are available.')
+        return {}
+
+
+def score_for(track, popularity):
+    album = track.get('album') or {}
+    scores = [popularity.get('tracks', {}).get(track.get('id'))]
+    scores.extend(popularity.get('artwork', {}).get(artwork_key(image.get('url')))
+                  for image in album.get('images') or [])
+    return max((score for score in scores if type(score) in (int, float)
+                and 0 <= score <= 100), default=-1)
+
+
+def normalize(rows, popularity=None):
     items, albums, images = [], set(), set()
-    # New additions appear at the start, including songs appended to the playlist.
-    for row in sorted(rows, key=lambda value: value.get('added_at') or '', reverse=True):
+    popularity = popularity or {}
+    # Stable newest-first ties; rank before deduplication so each cover keeps its best track.
+    ordered = sorted(rows, key=lambda value: value.get('added_at') or '', reverse=True)
+    ordered.sort(key=lambda row: (score_for(row.get('item') or row.get('track') or {}, popularity),
+                                 popularity.get('tracks', {}).get(
+                                     (row.get('item') or row.get('track') or {}).get('id'), -1)),
+                 reverse=True)
+    for row in ordered:
         track = row.get('item') or row.get('track')
         if not track or row.get('is_local') or track.get('type') != 'track':
             continue
@@ -84,6 +165,10 @@ def normalize(rows):
         items.append({'track_id': track_id, 'title': track.get('name') or 'Untitled',
                       'artist': ', '.join(artist['name'] for artist in track.get('artists', [])),
                       'image': image, 'url': 'https://open.spotify.com/track/' + track_id})
+        score = score_for(track, popularity)
+        if score >= 0:
+            items[-1].update(popularity=score, popularity_source='Muso',
+                             popularity_updated_at=popularity.get('updated_at'))
     return items
 
 
@@ -126,7 +211,8 @@ def main():
         rows.extend(page['items'])
         url = page.get('next')
     unique, fingerprints = [], []
-    for item in normalize(rows):
+    popularity = refresh_popularity()
+    for item in normalize(rows, popularity):
         value = fingerprint(item['image'])
         if any(visually_same(value, old) for old in fingerprints):
             continue
