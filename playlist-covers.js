@@ -7,17 +7,17 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/74Wb2owySWnNDu9DhKqbo2",
     "popularity": 39,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
-    "track_id": "0Lqec5kWpLGenZ5xCnfgNH",
-    "title": "Τρομακτικό",
-    "artist": "Παιδί Τραύμα",
+    "track_id": "3sjnNxHbmCKmpwL5lnrGEN",
+    "title": "Τα μυστικά",
+    "artist": "Παιδί Τραύμα, Nefeli Fasouli",
     "image": "https://i.scdn.co/image/ab67616d00001e02c4946b22ddc120587eacda5e",
-    "url": "https://open.spotify.com/track/0Lqec5kWpLGenZ5xCnfgNH",
+    "url": "https://open.spotify.com/track/3sjnNxHbmCKmpwL5lnrGEN",
     "popularity": 33,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "0mRi2D2T89f6ujHnNgGFcz",
@@ -27,7 +27,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/0mRi2D2T89f6ujHnNgGFcz",
     "popularity": 28,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "0s23AXzZWsnTP7JAVz0QTf",
@@ -37,7 +37,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/0s23AXzZWsnTP7JAVz0QTf",
     "popularity": 24,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "4Eyx8Typvyhsr2lTFwHDcN",
@@ -47,7 +47,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/4Eyx8Typvyhsr2lTFwHDcN",
     "popularity": 23,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "4dR9IkRTN2qzqRaL9qoa4P",
@@ -57,7 +57,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/4dR9IkRTN2qzqRaL9qoa4P",
     "popularity": 21,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "0XZuRmWQ4jCk4izUwNrizD",
@@ -67,7 +67,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/0XZuRmWQ4jCk4izUwNrizD",
     "popularity": 19,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "5R4ByJnuX8FqBEnH7zq4rD",
@@ -77,17 +77,17 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/5R4ByJnuX8FqBEnH7zq4rD",
     "popularity": 19,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
-    "track_id": "4kBxMokPJcHIwFuwaZmbWE",
-    "title": "Missiles",
+    "track_id": "1gGExGb2jFAxvkgcdvt6h8",
+    "title": "Lights Off Pt. 1",
     "artist": "Haneke Twins",
     "image": "https://i.scdn.co/image/ab67616d00001e0279910cb7474b962f7f703c03",
-    "url": "https://open.spotify.com/track/4kBxMokPJcHIwFuwaZmbWE",
+    "url": "https://open.spotify.com/track/1gGExGb2jFAxvkgcdvt6h8",
     "popularity": 18,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "1nFrAduobAKPSTL1hTtiPC",
@@ -97,7 +97,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/1nFrAduobAKPSTL1hTtiPC",
     "popularity": 17,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "1xm8iVDJN9WijBGKqDP7s5",
@@ -107,17 +107,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/1xm8iVDJN9WijBGKqDP7s5",
     "popularity": 17,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
-  },
-  {
-    "track_id": "5LKbkIkqfKWcTLkLErd6fm",
-    "title": "Bored",
-    "artist": "Sworr.",
-    "image": "https://i.scdn.co/image/ab67616d00001e02d431f96dac937ea1ac5318d9",
-    "url": "https://open.spotify.com/track/5LKbkIkqfKWcTLkLErd6fm",
-    "popularity": 17,
-    "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "2AvV663gE3rjrgNzF6Jw2t",
@@ -127,17 +117,17 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/2AvV663gE3rjrgNzF6Jw2t",
     "popularity": 17,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
-    "track_id": "20httWxVJC3MyiB0MRlGea",
-    "title": "Speechless",
-    "artist": "Haneke Twins",
-    "image": "https://i.scdn.co/image/ab67616d00001e02d106399e84f8e41116494e86",
-    "url": "https://open.spotify.com/track/20httWxVJC3MyiB0MRlGea",
-    "popularity": 16,
+    "track_id": "3qHaowZO3cTnpcRVQ6trGH",
+    "title": "Slow",
+    "artist": "Sworr.",
+    "image": "https://i.scdn.co/image/ab67616d00001e02d431f96dac937ea1ac5318d9",
+    "url": "https://open.spotify.com/track/3qHaowZO3cTnpcRVQ6trGH",
+    "popularity": 17,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "09qn6NLORvMgixaGkpJ1mI",
@@ -147,7 +137,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/09qn6NLORvMgixaGkpJ1mI",
     "popularity": 16,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "4LYUSnqU51fCWufLaXZLK4",
@@ -157,7 +147,17 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/4LYUSnqU51fCWufLaXZLK4",
     "popularity": 16,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
+  },
+  {
+    "track_id": "20httWxVJC3MyiB0MRlGea",
+    "title": "Speechless",
+    "artist": "Haneke Twins",
+    "image": "https://i.scdn.co/image/ab67616d00001e02d106399e84f8e41116494e86",
+    "url": "https://open.spotify.com/track/20httWxVJC3MyiB0MRlGea",
+    "popularity": 16,
+    "popularity_source": "Muso",
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "62QB8eTuuh4hZbD3zvG2rI",
@@ -167,7 +167,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/62QB8eTuuh4hZbD3zvG2rI",
     "popularity": 15,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "51TBGuofiTBcWgTEzQvqKG",
@@ -177,7 +177,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/51TBGuofiTBcWgTEzQvqKG",
     "popularity": 15,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "1z3iU84assy4MNVLIWbknS",
@@ -187,7 +187,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/1z3iU84assy4MNVLIWbknS",
     "popularity": 14,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "3sLI0x4Qqm9pI8uOFVnVdf",
@@ -197,7 +197,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/3sLI0x4Qqm9pI8uOFVnVdf",
     "popularity": 13,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "3QYyJPlRhMeu0Ndtkw3hdu",
@@ -207,7 +207,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/3QYyJPlRhMeu0Ndtkw3hdu",
     "popularity": 13,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "1QZavsF6fapNaEx3JFkE0q",
@@ -217,7 +217,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/1QZavsF6fapNaEx3JFkE0q",
     "popularity": 11,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "4yBR6mMqmEy3z7dV06Ulqa",
@@ -227,17 +227,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/4yBR6mMqmEy3z7dV06Ulqa",
     "popularity": 10,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
-  },
-  {
-    "track_id": "794RC1pVH7YsucrOD5kfQx",
-    "title": "NTISNEY",
-    "artist": "Eua Politaki",
-    "image": "https://i.scdn.co/image/ab67616d00001e02f4bafca624a49a9ed0121068",
-    "url": "https://open.spotify.com/track/794RC1pVH7YsucrOD5kfQx",
-    "popularity": 10,
-    "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "6O2TUTFuxVIS9fdXw5Qz4q",
@@ -247,17 +237,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/6O2TUTFuxVIS9fdXw5Qz4q",
     "popularity": 10,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
-  },
-  {
-    "track_id": "0uOBCN5AO9ZfYFyCfZkiJA",
-    "title": "If the Moon",
-    "artist": "Tiger Finkel",
-    "image": "https://i.scdn.co/image/ab67616d00001e0213e0f62528e017b31b5f3ff5",
-    "url": "https://open.spotify.com/track/0uOBCN5AO9ZfYFyCfZkiJA",
-    "popularity": 10,
-    "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "2Sqf5AO7oXLm3gHzI6PLjB",
@@ -267,7 +247,27 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/2Sqf5AO7oXLm3gHzI6PLjB",
     "popularity": 10,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
+  },
+  {
+    "track_id": "794RC1pVH7YsucrOD5kfQx",
+    "title": "NTISNEY",
+    "artist": "Eua Politaki",
+    "image": "https://i.scdn.co/image/ab67616d00001e02f4bafca624a49a9ed0121068",
+    "url": "https://open.spotify.com/track/794RC1pVH7YsucrOD5kfQx",
+    "popularity": 10,
+    "popularity_source": "Muso",
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
+  },
+  {
+    "track_id": "4NtNBFLBTu6uqbAF6qGZv6",
+    "title": "Two Doors",
+    "artist": "Tiger Finkel",
+    "image": "https://i.scdn.co/image/ab67616d00001e0213e0f62528e017b31b5f3ff5",
+    "url": "https://open.spotify.com/track/4NtNBFLBTu6uqbAF6qGZv6",
+    "popularity": 10,
+    "popularity_source": "Muso",
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "34eu2vgE62HKbXr4Ofmcby",
@@ -277,7 +277,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/34eu2vgE62HKbXr4Ofmcby",
     "popularity": 8,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "7ompaPt3W1dBjH7HzTlxl2",
@@ -287,7 +287,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/7ompaPt3W1dBjH7HzTlxl2",
     "popularity": 8,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "7acTHPsS4pTNDu2f8L7ogD",
@@ -297,7 +297,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/7acTHPsS4pTNDu2f8L7ogD",
     "popularity": 8,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "4r0Dgn3r9FtNnciEwEOdxm",
@@ -307,7 +307,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/4r0Dgn3r9FtNnciEwEOdxm",
     "popularity": 8,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "25HwxNqaNQRr5GTu3dl9Ox",
@@ -317,7 +317,17 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/25HwxNqaNQRr5GTu3dl9Ox",
     "popularity": 8,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
+  },
+  {
+    "track_id": "3j0wS9m68UEhu1TFczjSyg",
+    "title": "Senna",
+    "artist": "Jef Maarawi",
+    "image": "https://i.scdn.co/image/ab67616d00001e02835c0751677f6793983aab0b",
+    "url": "https://open.spotify.com/track/3j0wS9m68UEhu1TFczjSyg",
+    "popularity": 8,
+    "popularity_source": "Muso",
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "5ZBDyqbuDXF5GA6EpmT6PM",
@@ -327,7 +337,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/5ZBDyqbuDXF5GA6EpmT6PM",
     "popularity": 7,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "5NztCoVMHVqv6vHlgvRIyK",
@@ -337,7 +347,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/5NztCoVMHVqv6vHlgvRIyK",
     "popularity": 6,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "13SO8ColfswDe1PoYuOS0E",
@@ -347,7 +357,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/13SO8ColfswDe1PoYuOS0E",
     "popularity": 6,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "5qYGQoNNR2j9uIZUrLPHSa",
@@ -357,7 +367,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/5qYGQoNNR2j9uIZUrLPHSa",
     "popularity": 6,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "6zWQOvimc6cLg6KmU1kFbQ",
@@ -367,7 +377,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/6zWQOvimc6cLg6KmU1kFbQ",
     "popularity": 6,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "3GtJcpUEYvgkONMHoWhqti",
@@ -377,17 +387,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/3GtJcpUEYvgkONMHoWhqti",
     "popularity": 5,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
-  },
-  {
-    "track_id": "6IbH1LoiyHOpsB59adlYZI",
-    "title": "How to Sustain Minor Losses",
-    "artist": "Jef Maarawi",
-    "image": "https://i.scdn.co/image/ab67616d00001e02835c0751677f6793983aab0b",
-    "url": "https://open.spotify.com/track/6IbH1LoiyHOpsB59adlYZI",
-    "popularity": 4,
-    "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "18Zx1YSzz0i9rCL4UXsJPY",
@@ -397,7 +397,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/18Zx1YSzz0i9rCL4UXsJPY",
     "popularity": 4,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "5iT2PSt9GV1xSi9U33hsb8",
@@ -407,17 +407,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/5iT2PSt9GV1xSi9U33hsb8",
     "popularity": 3,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
-  },
-  {
-    "track_id": "5Ej7lJCMGAYAEkKu0rhToe",
-    "title": "Distress",
-    "artist": "Danai Simou",
-    "image": "https://i.scdn.co/image/ab67616d00001e02d90c0bf2e0f9a6b5f1c44e00",
-    "url": "https://open.spotify.com/track/5Ej7lJCMGAYAEkKu0rhToe",
-    "popularity": 3,
-    "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "5LN8tjusUyMmwubH7xOSPn",
@@ -427,7 +417,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/5LN8tjusUyMmwubH7xOSPn",
     "popularity": 3,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "5IIDNi13gczQJESkhh0Xzo",
@@ -437,17 +427,17 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/5IIDNi13gczQJESkhh0Xzo",
     "popularity": 3,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
-    "track_id": "1zCT2dDQxYk1Kp6hW6J6TL",
-    "title": "Here, Now, a Million Years",
-    "artist": "Afformance",
-    "image": "https://i.scdn.co/image/ab67616d00001e0284f79989095198e171b15bb7",
-    "url": "https://open.spotify.com/track/1zCT2dDQxYk1Kp6hW6J6TL",
-    "popularity": 2,
+    "track_id": "3nTP5pa3oEGHYwDXIzaPdF",
+    "title": "No one shouts",
+    "artist": "Danai Simou",
+    "image": "https://i.scdn.co/image/ab67616d00001e02d90c0bf2e0f9a6b5f1c44e00",
+    "url": "https://open.spotify.com/track/3nTP5pa3oEGHYwDXIzaPdF",
+    "popularity": 3,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "6hrjFDoabbXlWjY2x2VmLr",
@@ -457,7 +447,17 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/6hrjFDoabbXlWjY2x2VmLr",
     "popularity": 2,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
+  },
+  {
+    "track_id": "6YZiTYKzJluvQR56D43PQG",
+    "title": "Perspectivism",
+    "artist": "Afformance",
+    "image": "https://i.scdn.co/image/ab67616d00001e0284f79989095198e171b15bb7",
+    "url": "https://open.spotify.com/track/6YZiTYKzJluvQR56D43PQG",
+    "popularity": 2,
+    "popularity_source": "Muso",
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "2pxRQYTmVBTxNyiKSWXye6",
@@ -467,7 +467,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/2pxRQYTmVBTxNyiKSWXye6",
     "popularity": 1,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "6yYXV63WEmEyuRcUxujqzc",
@@ -477,27 +477,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/6yYXV63WEmEyuRcUxujqzc",
     "popularity": 1,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
-  },
-  {
-    "track_id": "1OxdDAEudsY0hZ7n4TQeQI",
-    "title": "Make It Good",
-    "artist": "Anthony Vam",
-    "image": "https://i.scdn.co/image/ab67616d00001e027a7eff5a62c8a856518810dc",
-    "url": "https://open.spotify.com/track/1OxdDAEudsY0hZ7n4TQeQI",
-    "popularity": 1,
-    "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
-  },
-  {
-    "track_id": "6uGSVjaQ9geHOFfkXcJMJO",
-    "title": "Sailor's Abandoned Ship",
-    "artist": "Afformance",
-    "image": "https://i.scdn.co/image/ab67616d00001e029ad953f659056c20169212a6",
-    "url": "https://open.spotify.com/track/6uGSVjaQ9geHOFfkXcJMJO",
-    "popularity": 1,
-    "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "2nhohLFGPYsQAUlcfPCMX8",
@@ -507,7 +487,17 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/2nhohLFGPYsQAUlcfPCMX8",
     "popularity": 1,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
+  },
+  {
+    "track_id": "6xn5ELK0FZuoVk8xXfBjcu",
+    "title": "Shadow Flirting",
+    "artist": "Anthony Vam",
+    "image": "https://i.scdn.co/image/ab67616d00001e027a7eff5a62c8a856518810dc",
+    "url": "https://open.spotify.com/track/6xn5ELK0FZuoVk8xXfBjcu",
+    "popularity": 1,
+    "popularity_source": "Muso",
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "2FqKOOP9bepDKVejL13VN9",
@@ -517,7 +507,27 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/2FqKOOP9bepDKVejL13VN9",
     "popularity": 1,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
+  },
+  {
+    "track_id": "6uGSVjaQ9geHOFfkXcJMJO",
+    "title": "Sailor's Abandoned Ship",
+    "artist": "Afformance",
+    "image": "https://i.scdn.co/image/ab67616d00001e029ad953f659056c20169212a6",
+    "url": "https://open.spotify.com/track/6uGSVjaQ9geHOFfkXcJMJO",
+    "popularity": 1,
+    "popularity_source": "Muso",
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
+  },
+  {
+    "track_id": "0Qtjiiwjvyg1b3ile62RBK",
+    "title": "Den Milao Gia Sena",
+    "artist": "SIC, Kalliopi Mitropoulou",
+    "image": "https://i.scdn.co/image/ab67616d00001e02c492e5164b979e51070fbf45",
+    "url": "https://open.spotify.com/track/0Qtjiiwjvyg1b3ile62RBK",
+    "popularity": 0,
+    "popularity_source": "Muso",
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "5ooZwedvZ18dz7whCcRmM1",
@@ -527,7 +537,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/5ooZwedvZ18dz7whCcRmM1",
     "popularity": 0,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "4DAvDnO6nNPv6SFBXWBigk",
@@ -537,7 +547,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/4DAvDnO6nNPv6SFBXWBigk",
     "popularity": 0,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "3hDfanQNJDjArsY8Oq4ANQ",
@@ -547,7 +557,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/3hDfanQNJDjArsY8Oq4ANQ",
     "popularity": 0,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "0pj7NmqRvL9voeeQnEOUw9",
@@ -557,7 +567,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/0pj7NmqRvL9voeeQnEOUw9",
     "popularity": 0,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "7L67cujRHotsqkhbtk6IV9",
@@ -567,7 +577,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/7L67cujRHotsqkhbtk6IV9",
     "popularity": 0,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "5G5DviZ3y6qN6yECvqDZiX",
@@ -577,7 +587,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/5G5DviZ3y6qN6yECvqDZiX",
     "popularity": 0,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "774LWlumE1VrE9vNPAgeq2",
@@ -587,7 +597,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/774LWlumE1VrE9vNPAgeq2",
     "popularity": 0,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "7BuDwEXJ4Ohsz9pBOgZarX",
@@ -597,7 +607,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/7BuDwEXJ4Ohsz9pBOgZarX",
     "popularity": 0,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "2xt0DOR2Vg395bQuHgBZco",
@@ -607,7 +617,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/2xt0DOR2Vg395bQuHgBZco",
     "popularity": 0,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "7HTJqMET2R1iFnbvncXiOP",
@@ -617,7 +627,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/7HTJqMET2R1iFnbvncXiOP",
     "popularity": 0,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "7ca65IlqlApEPhqQSv8UeE",
@@ -627,7 +637,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/7ca65IlqlApEPhqQSv8UeE",
     "popularity": 0,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "72Md1Favs6CtYHlR2ESDGO",
@@ -637,7 +647,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/72Md1Favs6CtYHlR2ESDGO",
     "popularity": 0,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "5QQRVSEiPtp2AukdG6YmRM",
@@ -647,7 +657,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/5QQRVSEiPtp2AukdG6YmRM",
     "popularity": 0,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "7HFJ42XM5RMeXwWYIhnVjV",
@@ -657,7 +667,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/7HFJ42XM5RMeXwWYIhnVjV",
     "popularity": 0,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "6MFsxMayYFe13nfUSzVtLO",
@@ -667,7 +677,7 @@ window.COSTAS_PLAYLIST = [
     "url": "https://open.spotify.com/track/6MFsxMayYFe13nfUSzVtLO",
     "popularity": 0,
     "popularity_source": "Muso",
-    "popularity_updated_at": "2026-10-24T13:41:08+00:00"
+    "popularity_updated_at": "2026-10-24T13:42:01+00:00"
   },
   {
     "track_id": "7jurmlTkkCov2KsROJ0WQe",
