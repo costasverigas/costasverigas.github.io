@@ -8,6 +8,7 @@ on:
     branches: [main]
     paths:
       - scripts/sync_spotify.py
+      - portfolio-popularity.json
       - .github/workflows/sync-spotify.yml
 
 permissions:
@@ -64,6 +65,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if [ "$SYNC_OUTCOME" = 'success' ]; then
             git add playlist-covers.json playlist-covers.js
+            if [ -f portfolio-popularity.json ]; then git add portfolio-popularity.json; fi
           fi
           if [ -f spotify-refresh.enc.json ]; then git add spotify-refresh.enc.json; fi
           if ! git diff --cached --quiet; then
